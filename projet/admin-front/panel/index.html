@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Coderthemes">
+
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../public/assets/images/favicon.ico">
+        <!-- App title -->
+        <title>GlaZyk Gym </title>
+
+        <link href="../public/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+        <!--Morris Chart CSS -->
+		<link rel="stylesheet" href="../public/plugins/morris/morris.css">
+
+        <!-- Tooltipster css -->
+        <link rel="stylesheet" href="../public/plugins/tooltipster/tooltipster.bundle.min.css">
+
+        <!-- Notification css (Toastr) -->
+        <link href="../public/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Custom box css -->
+        <link href="../public/plugins/custombox/css/custombox.min.css" rel="stylesheet">
+
+
+
+        <!-- Jquery filer css -->
+        <link href="../public/plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
+        <link href="../public/plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
+
+
+         <!-- DataTable-->
+        <link href="../public/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../public/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- App css -->
+        <link href="../public/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet"  href="../public/plugins/switchery/switchery.min.css">
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../public/assets/js/modernizr.min.js"></script>
+       <!-- jQuery and core system  -->
+       <script src="../public/assets/js/jquery.min.js"></script>
+
+
+    <!-- AngularJs System -->
+
+       <script src="../public/js/angular_1.5/angular.min.js"></script>
+
+       <!--<script src="../public/js/angular.route.js"></script>-->
+       <!--<script src="../public/js/angular-animate.min.js"></script>-->
+
+       <script src="../public/js/angular_1.5/angular-route.min.js"></script>
+       <!-- // -->
+       <script src="../public/js/helpers/ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+       <script src="../public/js/helpers/ng-file-upload/dist/ng-file-upload.min.js"></script>
+
+
+
+</head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                  <div class="spinner-wrapper">
+                    <div class="rotator">
+                      <div class="inner-spin"></div>
+                      <div class="inner-spin"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="#/" class="logo"><span><small>GLAZYK <span>GYM</span></small></span><i class="mdi mdi-cube"></i></a>
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation" ng-controller="NavbarCtrl">
+                    <div class="container">
+
+                        <!-- Navbar-left -->
+                        <!--<ul class="nav navbar-nav navbar-left">-->
+                            <!--<li>-->
+                                <!--<button class="button-menu-mobile open-left waves-effect waves-light">-->
+                                    <!--<i class="mdi mdi-menu"></i>-->
+                                <!--</button>-->
+                            <!--</li>-->
+                            <!--<li class="hidden-xs">-->
+                                <!--<form role="search" class="app-search">-->
+                                    <!--<input type="text" placeholder="Search..."-->
+                                           <!--class="form-control">-->
+                                    <!--<a href="#"><i class="fa fa-search"></i></a>-->
+                                <!--</form>-->
+                            <!--</li>-->
+                            <!--<li class="dropdown hidden-xs">-->
+                                <!--<a data-toggle="dropdown" class="dropdown-toggle menu-item waves-effect waves-light" href="#" aria-expanded="false">-->
+                                    <!--<span class=""><i class="fa fa-plus-square-o"></i></span>-->
+                                    <!--<span class="caret"></span></a>-->
+                                <!--<ul role="menu" class="dropdown-menu">-->
+                                    <!--<li><a href="#">Nouvelle Demande</a></li>-->
+                                    <!--<li><a href="#">Nouvelle Commande</a></li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+
+                        <!-- Right(Notification) -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--<li>-->
+                                <!--<a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">-->
+                                    <!--<i class="mdi mdi-bell"></i>-->
+                                    <!--<span class="badge up bg-primary">4</span>-->
+                                <!--</a>-->
+
+                                <!--<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">-->
+                                    <!--<li>-->
+                                        <!--<h5>Notifications</h5>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="icon bg-info">-->
+                                                <!--<i class="mdi mdi-account"></i>-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">New Signup</span>-->
+                                                <!--<span class="time">5 hours ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="icon bg-danger">-->
+                                                <!--<i class="mdi mdi-comment"></i>-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">New Message received</span>-->
+                                                <!--<span class="time">1 day ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="icon bg-warning">-->
+                                                <!--<i class="mdi mdi-settings"></i>-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">Settings</span>-->
+                                                <!--<span class="time">1 day ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="all-msgs text-center">-->
+                                        <!--<p class="m-0"><a href="#">See all Notification</a></p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+
+                            <!--<li>-->
+                                <!--<a href="#" class="right-menu-item dropdown-toggle" data-toggle="dropdown">-->
+                                    <!--<i class="mdi mdi-email"></i>-->
+                                    <!--<span class="badge up bg-danger">8</span>-->
+                                <!--</a>-->
+
+                                <!--<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right dropdown-lg user-list notify-list">-->
+                                    <!--<li>-->
+                                        <!--<h5>Messages</h5>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="avatar">-->
+                                                <!--<img src="../public/assets/images/users/avatar-2.jpg" alt="">-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">Patricia Beach</span>-->
+                                                <!--<span class="desc">There are new settings available</span>-->
+                                                <!--<span class="time">2 hours ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="avatar">-->
+                                                <!--<img src="../public/assets/images/users/avatar-3.jpg" alt="">-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">Connie Lucas</span>-->
+                                                <!--<span class="desc">There are new settings available</span>-->
+                                                <!--<span class="time">2 hours ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="user-list-item">-->
+                                            <!--<div class="avatar">-->
+                                                <!--<img src="../public/assets/images/users/avatar-4.jpg" alt="">-->
+                                            <!--</div>-->
+                                            <!--<div class="user-desc">-->
+                                                <!--<span class="name">Margaret Becker</span>-->
+                                                <!--<span class="desc">There are new settings available</span>-->
+                                                <!--<span class="time">2 hours ago</span>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="all-msgs text-center">-->
+                                        <!--<p class="m-0"><a href="#">See all Messages</a></p>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+
+                            <li>
+                                <a href="javascript:void(0);" class="right-bar-toggle right-menu-item">
+                                    <i class="mdi mdi-settings"></i>
+                                </a>
+                            </li>
+
+                            <li class="dropdown user-box">
+                                <a href="#" ng-click="$event.preventDefault();"  class="dropdown-toggle waves-effect waves-light user-link" data-toggle="dropdown" aria-expanded="true">
+                                    <img src="../public/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list">
+                                    <li>
+                                        <h5>Hi, {{session.prenom}} {{session.name | uppercase}} </h5>
+                                    </li>
+                                    <li><a href="#/user-profile"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                    <li><a href="#/parametres"><i class="ti-settings m-r-5"></i> Parametres</a></li>
+                                    <li><a href="javascript:void(0)" ng-click="logOut()"><i class="ti-power-off m-r-5"></i> Logout</a href="javascript:void(0)"></li>
+                                </ul>
+                            </li>
+
+                        </ul> <!-- end navbar-right -->
+
+                    </div><!-- end container -->
+                </div><!-- end navbar -->
+            </div>
+            <!-- Top Bar End -->
+
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="sidebar-inner slimscrollleft">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" ng-controller="SidebarCtrl">
+                        <div class="user-details">
+                            <div class="overlay"></div>
+                            <div class="text-center">
+                                <img src="../public/assets/images/users/avatar-1.jpg" alt="" class="thumb-md img-circle">
+                            </div>
+                            <div class="user-info">
+                                <div>
+                                    <a href="#setting-dropdown" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" ng-click="$event.preventDefault()"> <span ng-bind="(user.name +' '+ user.surname | uppercase)"></span>  <span class="mdi mdi-menu-down"></span>
+                                        <br/><span class="label label-brown" ng-bind="user.job"></span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown" id="setting-dropdown">
+                            <ul class="dropdown-menu">
+                                <li><a href="#/user-profile"><i class="mdi mdi-face-profile m-r-5"></i> Mon profil </a></li>
+                                <li><a href="#/parametres"><i class="mdi mdi-account-settings-variant m-r-5"></i>parametres</a></li>
+                                <li><a href="javascript:void(0)" ng-click="logOut()"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
+                            </ul>
+                        </div>
+
+                        <ul>
+                        	<li class="menu-title">Navigation</li>
+
+                            <li class="has_sub">
+                                <a href="#/" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Dashboard </span> </a>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-folder-open"></i> <span> Listes Articles </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#/listes" ng-if="session.type!='organisateur'">Mes Listes</a></li>
+                                    <li><a href="#/listes-for-vide" ng-if="session.type=='organisateur'" >Les Listes</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="has_sub"  ng-hide="session.type!='organisateur'">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-external-link"></i> <span> Ventes </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#/articles-sell"  ng-hide="!isDayVente"> Effectuer une vente</a></li>
+                                    <li><a href="#/listes-for-vide"> <i class="fa fa-bar-chart-o"></i>  Les Stats </a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="has_sub" ng-hide="session.type!='organisateur'">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-users"></i><span> Utilisateurs </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#/users-all">Liste</a></li>
+                                    <li><a href="#/user-create">Créer un organisateur</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub" ng-hide="session.type!='organisateur'">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-folder-open"></i> <span> Modifier textes</span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#/edit">Modifier la présentation</a></li>
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                    <a href="#/events" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span> Gla'Vides Dressing </span> </a>
+                            </li>
+
+
+
+                            <li class="menu-title">
+                                <hr>
+                            </li>
+
+                            <li class="has_sub" ng-hide="session.type!='vendeur'">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-email"></i><span> Mes Paiemments </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#/recap">Mes vides Dressing Recap </a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="clearfix"></div>
+
+                    <div class="help-box">
+                        <h5 class="text-muted m-t-0">For Help ?</h5>
+                        <p class=""><span class="text-dark"><b>Email:</b></span> <br/> support@brainpsace.com</p>
+                        <p class="m-b-0"><span class="text-dark"><b>Call:</b></span> <br/> (+225) 77971622</p>
+                    </div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+
+
+            <!-- ============================================================== -->
+            <!-- Content page here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+
+                <div ng-view class="view-animate"></div>
+
+                <footer class="footer text-center">
+                   <center> 2015 - 2018 © Brainspace Company.</center>
+                </footer>
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar" ng-controller="SettingCtrl">
+                <a href="javascript:void(0);" class="right-bar-toggle">
+                    <i class="mdi mdi-close-circle-outline"></i>
+                </a>
+                <h4 class="">Settings {{user.name | uppercase}}</h4>
+                <div class="setting-list nicescroll">
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Notifications</h5>
+                            <p class="text-muted m-b-0"><small>Do you need them?</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">API Access</h5>
+                            <p class="m-b-0 text-muted"><small>Enable/Disable access</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Auto Updates</h5>
+                            <p class="m-b-0 text-muted"><small>Keep up to date</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+
+                    <div class="row m-t-20">
+                        <div class="col-xs-8">
+                            <h5 class="m-0">Online Status</h5>
+                            <p class="m-b-0 text-muted"><small>Show your status to all</small></p>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                            <input type="checkbox" checked data-plugin="switchery" data-color="#7fc1fc" data-size="small"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Right-bar -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <script>
+            var resizefunc = [];
+        </script>
+
+
+        <script src="../public/assets/js/bootstrap.min.js"></script>
+        <script src="../public/assets/js/detect.js"></script>
+        <script src="../public/assets/js/fastclick.js"></script>
+        <script src="../public/assets/js/jquery.blockUI.js"></script>
+        <script src="../public/assets/js/waves.js"></script>
+        <script src="../public/assets/js/jquery.slimscroll.js"></script>
+        <script src="../public/assets/js/jquery.scrollTo.min.js"></script>
+        <script src="../public/plugins/switchery/switchery.min.js"></script>
+
+        <!-- Counter js  -->
+        <script src="../public/plugins/waypoints/jquery.waypoints.min.js"></script>
+        <script src="../public/plugins/counterup/jquery.counterup.min.js"></script>
+
+        <!--Morris Chart-->
+		<script src="../public/plugins/morris/morris.min.js"></script>
+		<script src="../public/plugins/raphael/raphael-min.js"></script>
+
+        <!-- Dashboard init -->
+        <script src="../public/assets/pages/jquery.dashboard.js"></script>
+
+        <!-- App js -->
+        <script src="../public/assets/js/jquery.core.js"></script>
+        <script src="../public/assets/js/jquery.app.js"></script>
+
+
+        <!-- DataTable-->
+        <script src="../public/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="../public/plugins/datatables/dataTables.bootstrap.js"></script>
+
+        <script src="../public/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="../public/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <!--<script src="../public/plugins/datatables/jszip.min.js"></script>-->
+        <script src="../public/plugins/datatables/pdfmake.min.js"></script>
+        <script src="../public/plugins/datatables/vfs_fonts.js"></script>
+        <script src="../public/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="../public/plugins/datatables/buttons.print.min.js"></script>
+        <script src="../public/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+        <script src="../public/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="../public/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="../public/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <!-- init -->
+
+        <!-- Tooltipster js -->
+        <script src="../public/plugins/tooltipster/tooltipster.bundle.min.js"></script>
+
+        <!-- Toastr js -->
+        <script src="../public/plugins/toastr/toastr.min.js"></script>
+        <!-- Toastr init js (Demo)-->
+        <script src="../public/assets/pages/jquery.toastr.js"></script>
+
+        <script src="../public/js/helpers/my-tools.js"></script>
+
+
+        <!-- Modal-Effect -->
+        <script src="../public/plugins/custombox/js/custombox.min.js"></script>
+        <script src="../public/plugins/custombox/js/legacy.min.js"></script>
+        <script type="text/javascript" src="../public/plugins/parsleyjs/parsley.min.js"></script>
+
+
+        <!-- Jquery filer js -->
+        <script src="../public/plugins/jquery.filer/js/jquery.filer.min.js"></script>
+
+
+        <script type="text/javascript">
+			$(document).ready(function() {
+				$('form').parsley();
+			});
+		</script>
+
+        <!--Angular routes-->
+        <script src="../app/routes.js"></script>
+        <script src="../app/Config/config.js"></script>
+
+
+        <!-- Angular Factories-->
+        <script src="../app/factories/LoginFactory.js"></script>
+        <script src="../app/factories/ListesFactory.js"></script>
+        <script src="../app/factories/EventFactory.js"></script>
+        <script src="../app/factories/SessionFactory.js"></script>
+
+        <!--Angular App Controllers -->
+        <script src="../app/controllers/NavbarCtrl.js"></script>
+        <script src="../app/controllers/SidebarCtrl.js"></script>
+        <script src="../app/controllers/SettingCtrl.js"></script>
+        <script src="../app/controllers/HomeCtrl.js"></script>
+        <script src="../app/controllers/userProfilCtrl.js"></script>
+        <script src="../app/controllers/editCtrl.js"></script>
+        <script src="../app/controllers/usersCtrl.js"></script>
+        <script src="../app/controllers/userDetails.js"></script>
+        <script src="../app/controllers/createUser.js"></script>
+        <script src="../app/controllers/listesCtrl.js"></script>
+        <script src="../app/controllers/parameterCtrl.js"></script>
+        <script src="../app/controllers/codeCtrl.js"></script>
+        <script src="../app/controllers/WaitDemandeCtrl.js"></script>
+        <script src="../app/controllers/vendreArticleCtrl.js"></script>
+        <script src="../app/controllers/eventCtrl.js"></script>
+        <script src="../app/controllers/editCtrl.js"></script>
+        <script src="../app/controllers/recapCtrl.js"></script>
+
+
+
+    </body>
+
+</html>

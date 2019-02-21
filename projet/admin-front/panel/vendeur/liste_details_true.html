@@ -1,0 +1,170 @@
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Vendeur/Liste</h4>
+
+                    <ol class="breadcrumb p-0 m-0">
+                        <li>
+                            <a href="#/recap"> <i class="fa fa-arrow-left"></i> Retour </a>
+                        </li>
+                        <li class="active">
+                            details-articles
+                        </li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-12 col-lg-12">
+
+                    <div class="card-box">
+                        <h4 class="header-title m-t-0 m-b-30">Articles de la liste </h4>
+
+                        <h4 class="header-title m-t-0 m-b-30 pull-right" >
+
+                            <a href="#/addlistedetails/{{num_liste}}" ng-class="{'hidden':burnOut}" ng-hide="session.type=='organisateur'"
+                                class="btn btn-success waves-effect waves-light">
+                                Ajouter un article <i class="m-l-5 fa fa-plus-square"></i>
+                            </a>
+                        </h4>
+                        <h4 class="header-title m-t-0 m-b-30 pull-right" ng-hide="empty || session.type=='organisateur'">
+                            <div class="m-b-30 m-r-5">
+                            </div>
+                        </h4>
+
+
+                        <ul class="nav nav-tabs">
+
+                            <li class="active">
+                                <a href="#in-wait"  id="recharger" title=" juste a test" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                    <span class=""><i class="fa fa-user"></i></span>
+                                    <span class="hidden-xs">Articles</span>
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <a href="#in-done" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                    <span class=""><i class="fa fa-calendar-check-o"></i></span>
+                                    <span class="hidden-xs">Bon à savoir</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="in-wait">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="panel panel-border panel-danger">
+                                            <div class="panel-body">
+
+
+                                                <div class="property-card property-horizontal">
+
+                                                    <div class="row m-t-5 m-l-5" ng-repeat="d in listesdetails" >
+                                                        <div class="col-sm-4">
+                                                            <!--<div class="property-image" style="background: url('../public/images/icon-standard.png') center center / cover no-repeat;">-->
+                                                            <div class="property-image" ng-style="{'background-image':'url({{d.photo}})'} "
+                                                                 style="background: center center; background-size: contain; background-repeat: no-repeat;" >
+                                                                <span class="property-label label label-danger">A vendre </span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /col 4 -->
+                                                        <div class="col-sm-8">
+                                                            <div class="property-content">
+                                                                <div class="listingInfo">
+                                                                    <div class="">
+                                                                        <h4 class="text-success m-t-0">Prix :  {{d.prix}} <i class="fa fa-euro"></i></h4>
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <h3><a href="javascript:void(0);" class="text-dark">{{d.description}}</a></h3>
+                                                                        <p class="text-muted"><i class="mdi mdi-map-marker-radius m-r-5"></i>Glazyk gym vide dressing, France,</p>
+
+                                                                        <p class="font-13 text-muted m-b-0 lead">TAILLE: {{d.taille}}  STATUT: {{d.statut}}</p>
+                                                                        <p class="font-13 text-muted m-b-0"> {{d.commentaire}}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end. Card actions -->
+                                                            </div>
+                                                        </div>
+                                                        <!-- /col 8 -->
+                                                    </div>
+                                                    <!-- /inner row -->
+                                                </div>
+                                                <!-- End property item -->
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane" id="in-done">
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <div class="panel panel-border panel-success">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title"> Information sur les parametres </h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- sample modal content -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">SOUMISSION DE LISTE</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Condition de soumission</h4>
+                    <p>Après avoir soumis cette liste, vous ne pourrez plus la modifier.</p>
+                    <p>Choisir le vide dressing concerné :</p>
+                    <select ng-model="eventselect" class="selectpicker" data-style="btn-custom">
+                            <option value="{{e.id_event}}" ng-repeat= "e in events">{{e.name_event}}</option>
+                    </select>
+                    <hr>
+                    </p>Voulez-vous continuer ?</p>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light" data-dismiss="modal" ng-hide="eventselect==e.id_event" ng-click="MajListeStatut(num_liste,eventselect)">Oui, je soumets</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+

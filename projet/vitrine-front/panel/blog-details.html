@@ -1,0 +1,103 @@
+
+    <!-- hero-section-start -->
+    <div class="hero-section" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero-content">
+                        <h1 class="hc-header">GlaZik'Actu</h1>
+                        <p class="hc-text">Les infos et astuces par GlaZik Gym</p>
+                    </div>
+                </div>
+            </div>
+            <div class="crumbs" ng-controler="blogdetailsCtrl">
+                <nav>
+                    <ul class="crumb">
+                        <li><a class="crumb-home" href="#/"><i class="fa fa-home"></i></a></li>
+                        <li><a href="#/blog">GlaZik'Actu<i class="fa fa-angle-right"></i></a></li>
+
+                        <li class="breaking-news"><a class="active-title" href="#">{{article.titre}}</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- hero-section-end -->
+    <!--three column section start-->
+    <div class="three-clm-section">
+        <div class="container" ng-controler="blogdetailsCtrl">
+            <div class="col-md-8 col-sm-12">
+                <div class="blog-post-details">
+                    <div class="post-details">
+                        <h1 class="blog-title">{{article.titre}}</h1>
+                        <p>{{article.nom_cat}}</p>
+                        <img src="public/img/blog/blog-detail/blog-post-image.jpg" alt="" class="blog-image" />
+                        <p class="blog-desc">{{article.contenu}}</p>
+                        
+                    </div>
+                    <div class="comments-section">
+                        <div class="comments-count">
+                            <h5>Commentaires</h5>
+                        </div>
+                        <div class="sngl-comment-area">
+                            <div class="single-comment" ng-repeat="c in commentaires">
+                                <!-- <div class="user-img-cmnt"><img src="img/user-image/user1.jpg" alt="user_image" /></div> -->
+                                <div class="comment-detail">
+                                    <h1 class="user-name">{{c.auteur}}<span class="date">{{c.date}}</span></h1>
+                                    <p class="comment">{{c.commentaire}}</p>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    </div>
+                    <div class="contact-form">
+                        <h1>Laissez un commentaire</h1>
+                        <div class="blog-leave-comment-area">
+                              <form >  
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="blca-name blca-formgroup">
+                                            <input type="text" name="name" ng-model="name" placeholder="Votre nom * " required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="blca-email blca-formgroup">
+                                            <input type="text" name="email" ng-model="email" placeholder=" votre addresse email * " required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="blca-comment blca-formgroup">
+                                            <textarea name="msg" ng-model="texte" placeholder="Votre commentaire *" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="blca-comment blca-formgroup">
+                                            <button class="hover-bs" ng-click="AddComment(name,email,texte)" name="comment" >Poster</button>
+                                        </div>
+                                    </div>
+                                </div>
+                             </form> 
+                        </div>
+                    </div>
+                </div>
+                <div class="most-populer col-md-3" ng-controller="blogCtrl">
+                    <h1 class="bdr-top-title">Les plus consultés</h1>
+                    <div class="populer-item" ng-repeat="mp in mostpopular">
+                        <h2><a href="#/blog/{{mp.id}}">{{mp.titre}}</a></h2>
+                        <p class="p-t-cat">{{mp.nom_cat}}</p>
+                    </div>
+                    <div class="banner-ad">
+                        <img src="public/img/banner/banner.jpg" alt="banner" />
+                    </div>
+                    <div class="banner-ad">
+                        <img src="public/img/banner/banner.jpg" alt="banner" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        </div>
+    </div>
+    <!--three column section end-->

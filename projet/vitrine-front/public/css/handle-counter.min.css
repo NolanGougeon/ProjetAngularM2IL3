@@ -1,0 +1,50 @@
+<<<<<<< HEAD
+button {
+    cursor: pointer
+}
+
+input {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    padding: 6px 12px
+}
+.handle-counter .counter-minus,
+.handle-counter .counter-plus,
+.handle-counter input {
+    float: left;
+    text-align: center
+}
+
+.handle-counter input {
+    width: 50px;
+    border-width: 1px;
+    border-left: none;
+    border-right: none
+=======
+button {
+    cursor: pointer
+}
+
+input {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    padding: 6px 12px
+}
+.handle-counter .counter-minus,
+.handle-counter .counter-plus,
+.handle-counter input {
+    float: left;
+    text-align: center
+}
+
+.handle-counter input {
+    width: 50px;
+    border-width: 1px;
+    border-left: none;
+    border-right: none
+>>>>>>> 93beccbc6a36fdac68cae845463c403d19d21f5a
+}

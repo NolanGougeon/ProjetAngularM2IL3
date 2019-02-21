@@ -1,0 +1,34 @@
+<div class="content">
+    <div class="container" ng-controller="listesCtrl">
+            <br></br>
+        <h4 class="header-title m-t-0">AJOUTER UNE VIDE DRESSING</h4>
+        <div class="p-20">
+            <form action="#" data-parsley-validate novalidate>
+                <div class="form-group">
+                    <label for="userName">Nom du vide dressing<span class="text-danger">*</span></label>
+                    <input type="text" name="name_event" parsley-trigger="change" required
+                           placeholder="Entrer un nom " class="form-control" id="name_event" ng-model="name_event">
+                </div>
+                <div class="form-group">
+                        <label for="userName">Date du vide dressing<span class="text-danger">*</span></label>
+                        <input type="text" name="date_event" parsley-trigger="change" required
+                               placeholder="Entrer une date selon le format aa/mm/jj " class="form-control" id="date_event" ng-model="date_event">
+                    </div>
+                    <div class="form-group">
+                            <label for="userName">Lieu du vide dressing<span class="text-danger">*</span></label>
+                            <input type="text" name="name_event" parsley-trigger="change" required
+                                   placeholder="Entrer un nom " class="form-control" id="lieu_event" ng-model="lieu_event">
+                        </div>
+                <div class="form-group text-right m-b-0">
+                    <a class="btn btn-primary waves-effect waves-light" ng-click="AddEvent(name_event,date_event,lieu_event)">
+                        Créer
+                    </a>
+                    <a href="#/events" class="btn btn-default waves-effect m-l-5">
+                        Annuler
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

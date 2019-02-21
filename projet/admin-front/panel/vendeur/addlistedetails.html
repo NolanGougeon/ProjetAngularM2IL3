@@ -1,0 +1,96 @@
+<div class="content">
+        <div class="container">
+
+            <div class="row card-box">
+
+                <div class="m-t-30">
+                    <h4 class="header-title m-t-5">AJOUTER UN ARTICLE</h4>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+                        <div class="property-card">
+
+
+                            <div class="thumb-xl member-thumb m-b-10 center-block">
+                                <img src="../public/assets/images/users/avatar-1.jpg" id="blah" class="img-thumbnail img-responsive"
+                                    height="300px" width="400px" alt="profile-image">
+                            </div>
+
+
+                            <div class="property-content">
+                                <div class="listingInfo">
+                                        <div class="m-t-50">
+
+                                            <div class="p-20">
+                                               <div class="form-group clearfix" >
+
+                                                   <!--<div class="btn btn-teal btn-small col-sm-12 padding-left-0 padding-right-0 " ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"-->
+                                                        <!--ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100"-->
+                                                        <!--ngf-resize="{width: 100, height: 100}" id="imgInp"> Choisir image-->
+                                                   <!--</div>-->
+
+                                                   <form id="form1" runat="server">
+                                                       <input type='file' id="imgInp" required  ngf-accept="'image/*'" ngf-max-size="3MB"
+                                                              ngf-min-height="100" ngf-resize="{width: 100, height: 100}" class="btn btn-teal btn-small col-sm-12 padding-left-0 padding-right-0 "
+                                                              ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"   />
+                                                   </form>
+                                               </div>
+                                            </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                        <div class="p-20">
+                            <form name="form" data-parsley-validate novalidate>
+                                <div class="form-group">
+                                    <label >Nom de l'article<span class="text-danger">*</span></label>
+                                    <input type="text" required
+                                           placeholder="Entrer un nom" class="form-control"  ng-model="art.description">
+                                </div>
+                                <div class="form-group">
+                                    <label >Prix<span class="text-danger">*</span></label>
+                                    <input type="text"  data-parsley-type="number" required
+                                           placeholder="Entrer une somme" class="form-control"  ng-model="art.prix">
+                                </div>
+                                <div class="form-group">
+                                    <label >Taille<span class="text-danger">*</span></label>
+                                    <input type="text"  data-parsley-maxlength="6" required
+                                           placeholder="i.e XS ,S , M, L, XL, XXL ..." class="form-control"  ng-model="art.taille">
+                                </div>
+                                <div class="form-group">
+                                    <label >Commentaire<span class="text-danger">*</span></label>
+                                    <input type="text" required
+                                           placeholder="plus d'infos sur l'article" class="form-control"  ng-model="art.commentaire">
+                                </div>
+
+
+                                <div class="form-group text-right m-b-0">
+                                    <button class="btn btn-primary waves-effect waves-light" ng-disabled="form.$invalid" type="submit" ng-click="AddListeDetails(art)">
+                                        Créer
+                                    </button>
+                                    <a href="#/listes/{{num_liste}}" class="btn btn-default waves-effect m-l-5">
+                                        Annuler
+                                    </a>
+                                </div>
+
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- End row-->
+
+
+        </div>
+    </div>

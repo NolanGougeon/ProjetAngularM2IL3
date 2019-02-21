@@ -1,0 +1,141 @@
+<!-- hero-section-start -->
+<div class="hero-section" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hero-content">
+                    <h1 class="hc-header">GlaZik Vide DRESSING</h1>
+                    <p class="hc-text">Le vide Dressing, plus sûr, plus économique !</p>
+                    <a class="hc-link" href="#/about/us">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hero-section-end -->
+
+<!-- off-banner-area-start -->
+<div class="off-banner-area" ng-controller="homeCtrl">
+        <div class="container">
+                <div class="row">
+                <div class="col-xs-12">
+                    <div class="our-events-head">
+                        <p class="section-title-p">NOS EVENEMENTS</p>
+                        <h2 class="sectiont-title">PROCHAIN <span class="sectiont-title-bold">VIDE DRESSING</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="off-banner-timer">
+                        <div class="timer-area">
+                            <div data-countdown></div>
+                            <div id="count"></div>
+                            <br></br>
+                            <a class="hc-link" href="#/register">Participer</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- off-banner-area-end -->
+
+
+<!-- top-service-area-start -->
+<div class="top-service-area hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="top-service">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-top-service">
+                                <div class="sts-img">
+                                    <div class="sts-img-box">
+                                        <img src="public/img/top-service/service1.png" alt="">
+                                    </div>
+                                </div>
+                                <p>Plus efficace</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-top-service">
+                                <div class="sts-img">
+                                    <div class="sts-img-box">
+                                        <img src="public/img/top-service/service2.png" alt="">
+                                    </div>
+                                </div>
+                                <p>Plus fluide</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-top-service">
+                                <div class="sts-img">
+                                    <div class="sts-img-box">
+                                        <img src="public/img/top-service/service3.png" alt="">
+                                    </div>
+                                </div>
+                                <p>Plus économique</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="single-top-service">
+                                <div class="sts-img">
+                                    <div class="sts-img-box">
+                                        <img src="public/img/top-service/service4.png" alt="">
+                                    </div>
+                                </div>
+                                <p>Meilleur rapport qualité/prix</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- top-service-area-end -->
+<!-- latest-news-area-start -->
+<div class="latest-news-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="latest-news-head">
+                    <p class="section-title-p">Notre Blog</p>
+                    <h2 class="sectiont-title">GlaZik'<span class="sectiont-title-bold">Actu</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-controller="blogCtrl">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="single-news clearfix">
+                    <div class="sn-img">
+                        <img src="public/img/news/news1.jpg" alt="">
+                    </div>
+                    <div class="sn-content">
+                        <span class="sn-date">{{latest.date}}</span>
+                        <h4 class="sn-title">{{latest.titre}} <span class="bold">{{latest.nom_cat}}</span></h4>
+                        <p class="sn-text">{{latest.contenu |limitTo:100}}</p>
+                        <a class="read-more" ng-href="#/blog/{{latest.id}}">LIRE L'ARTICLE  <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="single-news clearfix">
+                    <div class="sn-img">
+                        <img src="public/img/news/news1.jpg" alt="">
+                    </div>
+                    <div class="sn-content">
+                        <span class="sn-date">{{latest1.date}}</span>
+                        <h4 class="sn-title">{{latest1.titre}} <span class="bold">{{latest1.nom_cat}}</span></h4>
+                        <p class="sn-text">{{latest1.contenu |limitTo:100}}...</p>
+                        <a class="read-more" ng-href="#/blog/{{latest1.id}}">LIRE L'ARTICLE  <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- latest-news-area-end -->

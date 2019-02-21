@@ -1,0 +1,148 @@
+<!-- hero-section-start -->
+<div class="hero-section" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hero-content">
+                    <h1 class="hc-header">Online Personal Training</h1>
+                    <p class="hc-text">Maximum Results in Minimum Time, no matter your location</p>
+                    <a class="hc-link" href="#">SELECT YOUR PLAN</a>
+                </div>
+            </div>
+        </div>
+        <div class="crumbs">
+            <nav>
+                <ul class="crumb">
+                    <li><a class="crumb-home" href="#"><i class="fa fa-home"></i></a></li>
+                    <li>
+                        <a href="#/register">Register <i class="fa fa-angle-right"></i></a>
+                    </li>
+                    <li ng-show="DataLogin">
+                        <a class="btn btn-danger" ng-click="NavigationForm();"> <i class="fa fa-angle-double-left"></i> retour</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- hero-section-end -->
+
+<!-- user-information-area-start -->
+<div class="user-information-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div class="user-information animated bounceInDown" ng-if="userInfo">
+                    <h2 class="fp-title">USER INFORMATION <i class="fa fa-user"></i> </h2>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+
+                            <form name="userInfo" role="form">
+
+                                <div class="user-information-content">
+
+                                    <div class="uic-user-name">
+                                        <label>Cilivité<i class="fa fa-long-arrow-down"></i></label>
+                                        <select name="civilite" ng-model="user.civilite" required >
+                                            <option ng-value="Mr"> Monsieur </option>
+                                            <option ng-value="Mme"> Madame </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="uic-user-name">
+                                        <label>Nom<i class="fa fa-user"></i></label>
+                                        <input type="text" placeholder="Nom" ng-model="user.nom" required>
+                                    </div>
+                                    <div class="uic-user-name">
+                                        <label>Prénom<i class="fa fa-"></i></label>
+                                        <input type="text" placeholder="prénom" ng-model="user.prenom" required>
+                                    </div>
+
+                                    <div class="uic-user-name">
+                                        <label>Date de Naissance<i class="fa fa-calendar"></i></label>
+                                        <input type="date"  ng-model="user.dateNaissance" required>
+                                    </div>
+
+                                    <div class="uic-user-name">
+                                        <label>Télephone<i class="fa fa-phone"></i></label>
+                                        <input type="text" placeholder="ex : 0761842960" ng-model="user.numero" required>
+                                    </div>
+
+                                    <div class="uic-user-name">
+                                        <label>Code Postal<i class="fa fa-home"></i></label>
+                                        <input type="number" placeholder="ie : 35700" ng-model="user.cp" required>
+                                    </div>
+
+                                    <div class="uic-user-name">
+                                        <label>Adresse<i class="fa fa-home"></i></label>
+                                        <input type="text" placeholder="i.e: 12 avenue la rue triomphe" ng-model="user.adresse" required>
+                                    </div>
+
+                                    <div class="pic-have-coupon">
+                                        <a href="javascript:void(0);" class="hover-bs" ng-hide="userInfo.$invalid" ng-disabled="userInfo.$invalid"
+                                           ng-click="NavigationForm(user);" > Continuer <i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Information-->
+                <div class="user-information animated bounceIn" ng-if="DataLogin">
+
+                    <h2 class="fp-title">LOGIN USER INFORMATION <i class="fa fa-code"></i></h2>
+                    <div class="row">
+
+                        <div class="col-md-8 col-md-offset-2">
+
+
+                            <div class="user-information-content">
+
+
+                                <div class="uic-user-name">
+                                    <label>Adresse email <i class="fa fa-mail-forward"></i></label>
+                                    <input type="text" placeholder="email" ng-model="user.email" required>
+                                </div>
+
+                                <div class="uic-user-name">
+                                    <label>Password<i class="fa fa-code"></i></label>
+                                    <input type="password" ng-model="user.password" required>
+                                </div>
+
+                                <div class="uic-user-name">
+                                    <label>Confirmation<i class="fa fa-code"></i></label>
+                                    <input type="password" ng-model="user.passconfirm" required>
+                                </div>
+
+                                <div class="uic-user-name">
+                                    <input type="hidden" ng-model="user.type" required ng-value="vendeur">
+                                </div>
+
+                                <div class="pic-agreement">
+                                    <input type="checkbox" required ng-click="afficherBtn()">
+                                    <label> j'ai lu et j'accepte les conditions d'utilisation
+                                        <a href="#/">terms of uses</a>
+                                    </label>
+                                </div>
+
+                                <div class="pic-have-coupon" ng-show="readTerms">
+                                    <a href="" class="hover-bs" ng-click="registerData(user)" > Continuer <i class="fa fa-send"></i></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- user-information-area-end -->
+
+
+

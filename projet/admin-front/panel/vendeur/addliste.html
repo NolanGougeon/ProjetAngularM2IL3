@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="container" ng-controller="listesCtrl">
+            <br></br>
+        <h4 class="header-title m-t-0">AJOUTER UNE LISTE</h4>
+        <div class="p-20">
+            <form action="#" data-parsley-validate novalidate>
+                <div class="form-group">
+                    <label for="userName">Nom de la liste<span class="text-danger">*</span></label>
+                    <input type="text" name="nomliste" parsley-trigger="change" required
+                           placeholder="Entrer un nom de liste" class="form-control" id="listename" ng-model="nomliste">
+                </div>
+                <div class="form-group text-right m-b-0">
+                    <a class="btn btn-primary waves-effect waves-light" ng-click="AddListe(nomliste)">
+                        Créer
+                    </a>
+                    <a href="#/listes" class="btn btn-default waves-effect m-l-5">
+                        Annuler
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

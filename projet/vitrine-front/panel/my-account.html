@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Fitness Trainer || My Account</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#scroll-menu" data-offset="100">
+    <!-- preloader -->
+    <div id="preloader"></div>
+    <!-- header-start -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="header-top-left">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="header-top-right">
+                            <div class="single-htr">
+                                <i class="fa fa-shopping-basket"></i>
+                                <span>0 iteam - 00$</span>
+                            </div>
+                            <div class="single-htr">
+                                <i class="fa fa-key"></i>
+                                <span id="sign_in">Sign in</span>
+                                <div id="sign_in_form" class="signin-form-area">
+                                    <div class="signin-form-area-top">
+                                        <h3>Fitness <span class="h-light">Trainer</span></h3>
+                                        <h6>BEST FITNESS CLUB</h6>
+                                        <div class="signin-form">
+                                            <form action="#">
+                                                <div class="signin-inputs">
+                                                    <div class="input-email">
+                                                        <input class="femail" type="text" placeholder="Email" required="">
+                                                    </div>
+                                                    <div class="input-password">
+                                                        <input class="fpass type_password" type="password" placeholder="Password" required="">
+                                                        <span class="show-pass">Show</span>
+                                                    </div>
+                                                </div>
+                                                <div class="remember-recover clearfix">
+                                                    <div class="remember">
+                                                        <input type="checkbox">
+                                                        <span>Remember me</span>
+                                                    </div>
+                                                    <div class="recover">
+                                                        <a href="#">Recover password</a>
+                                                    </div>
+                                                </div>
+                                                <button class="sign-in-btn hover-bs">SIGN IN</button>
+                                                <div class="signin-or">
+                                                    <span>OR</span>
+                                                </div>
+                                            </form>
+                                            <button class="reg-by-fb-btn hover-bs">REGISTER WITH FACEBOOK</button>
+                                        </div>
+                                    </div>
+                                    <div class="reg-account">
+                                        <p>Don’t have an account?<a href="#">Register</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-htr">
+                                <i class="fa fa-user-times"></i>
+                                <span id="top_reg">Register</span>
+                                <div class="register-form-area" id="top_reg_form">
+                                    <div class="rf-head">
+                                        <span class="rfa-close" id="rfa_close"><i class="fa fa-times"></i></span>
+                                        <img src="public/img/logo-reg.png" alt="">
+                                        <p>Join a community of over 4000 people</p>
+                                    </div>
+                                    <div class="rf-body clearfix">
+                                        <div class="rf-body-or-area">
+                                            <span>or</span>
+                                        </div>
+                                        <div class="rf-body-left">
+                                            <form action="#">
+                                                <div class="rf-inputs-area">
+                                                    <div class="rf-input-email rf-inputs">
+                                                        <input class="rf-email" type="email" placeholder="Email" required="">
+                                                    </div>
+                                                    <div class="rf-input-name rf-inputs">
+                                                        <input class="rf-name" type="text" placeholder="First name" required="">
+                                                    </div>
+                                                    <div class="rf-input-username rf-inputs">
+                                                        <input class="rf-username" type="text" placeholder="Username" required="">
+                                                    </div>
+                                                    <div class="rf-input-password rf-inputs">
+                                                        <input class="rf-password type_password" type="password" placeholder="Password" required="">
+                                                        <span class="show-pass">Show</span>
+                                                    </div>
+                                                </div>
+                                                <div class="rf-checkbox-area">
+                                                    <input type="checkbox">
+                                                    <p>Sign me up for occasional newslettes and special offers</p>
+                                                </div>
+                                                <button class="register-btn hover-bs">REGISTER</button>
+                                            </form>
+                                        </div>
+                                        <div class="rf-body-right">
+                                            <button class="reg-by-fb-btn hover-bs">REGISTER WITH FACEBOOK</button>
+                                            <p>We wont post to Facebook withour your permission</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-area hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="about-us.html">ABOUT US</a>
+                                        <ul class="singel-dropdown">
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a>
+                                                <ul class="single-thirdlevel-menu">
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="success-story.html">SUCCESS STORY</a></li>
+                                    <li><a href="event.html">EVENT</a></li>
+                                    <li><a href="blog.html">BLOG</a></li>
+                                    <li><a href="shop.html">SHOP</a></li>
+                                    <li><a href="contact.html">CONTACT</a>
+                                    </li>
+                                    <li><a href="index.html">PAGES</a>
+                                        <div class="single-megamenu">
+                                            <span>
+                                                <a href="index.html">Home</a>
+                                                <a href="about-us.html">About Us</a>
+                                                <a href="blog.html">Blog</a>
+                                                <a href="blog-details.html">Blog Details</a>
+                                                <a href="event.html">Event</a>
+                                                <a href="event-details.html">Event Details</a>
+                                                <a href="pricing-table.html">Pricing Table</a>
+                                            </span>
+                                            <span>
+                                                <a href="shop.html">Shop</a>
+                                                <a href="product-single-page.html">Product Single</a>
+                                                <a href="success-story.html">Success Story</a>
+                                                <a href="success-story-details.html">Success Story Details</a>
+                                                <a href="about-trainer.html">About Trainer</a>
+                                                <a href="contact.html">Contact</a>
+                                                <a href="my-account.html">My Account</a>
+                                            </span>
+                                            <span>
+                                                <a href="exercise-plan.html">Exercise Plan</a>
+                                                <a href="exercise-plan-details.html">Exercise Plan Details</a>
+                                                <a href="forgot-password.html">Forgot Password</a>
+                                                <a href="login.html">Login</a>
+                                                <a href="registration.html">Registration</a>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-search">
+                            <form action="#">
+                                <span id="search_icon" class="search-icon"><i class="fa fa-search"></i></span>
+                                <button class="search-text">SEARCH</button>
+                                <input id="search_box" class="search-box" type="text" required="" placeholder="Search Here">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-area visible-xs visible-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile_menu">
+                            <nav id="mobile_menu_active">
+                                <ul>
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="about-us.html">ABOUT US</a>
+                                        <ul>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a>
+                                                <ul>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="success-story.html">SUCCESS STORY</a></li>
+                                    <li><a href="event.html">EVENT</a></li>
+                                    <li><a href="blog.html">BLOG</a></li>
+                                    <li><a href="shop.html">SHOP</a></li>
+                                    <li><a href="contact.html">CONTACT</a>
+                                    </li>
+                                    <li><a href="index.html">PAGES</a>
+                                        <ul>
+                                            <a href="index.html">Home</a>
+                                            <a href="about-us.html">About Us</a>
+                                            <a href="blog.html">Blog</a>
+                                            <a href="blog-details.html">Blog Details</a>
+                                            <a href="event.html">Event</a>
+                                            <a href="event-details.html">Event Details</a>
+                                            <a href="pricing-table.html">Pricing Table</a>
+                                            <a href="shop.html">Shop</a>
+                                            <a href="product-single-page.html">Product Single</a>
+                                            <a href="success-story.html">Success Story</a>
+                                            <a href="success-story-details.html">Success Story Details</a>
+                                            <a href="about-trainer.html">About Trainer</a>
+                                            <a href="contact.html">Contact</a>
+                                            <a href="my-account.html">My Account</a>
+                                            <a href="exercise-plan.html">Exercise Plan</a>
+                                            <a href="exercise-plan-details.html">Exercise Plan Details</a>
+                                            <a href="forgot-password.html">Forgot Password</a>
+                                            <a href="login.html">Login</a>
+                                            <a href="registration.html">Registration</a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!--my account section start-->
+    <div class="account-banner-sec" id="home">
+        <div class="account-profile">
+            <img src="img/profile/user1.jpg" alt="user image" />
+            <h2 class="p-name">johan smith</h2>
+            <p class="date">Joined February 22, 2017 </p>
+        </div>
+    </div>
+    <!--my account section end-->
+    <!--account details section start-->
+    <div class="account-details-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-4 xd-12">
+                    <div class="row">
+                        <div class="acc-category">
+                            <!-- Nav tabs -->
+                            <ul class="nav-item-area my-account-left" role="tablist">
+                                <li class="nav-item active">
+                                    <a href="#" class="nav-link active"><i class="fa fa-user-circle-o"></i>My profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa fa-calendar"></i>Exercise Plan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"><i class="fa fa-sign-out"></i>Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-8 xd-12">
+                    <div class="row">
+                        <div class="acc-right">
+                            <div class="col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                                <!-- Tab panes -->
+                                <div class="account-details">
+                                    <div class="tab-content">
+                                        <div class="account-details-content">
+                                            <div class="row">
+                                                <div class="change-sec">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <h1 class="ch-title">Change e-mail</h1>
+                                                        <form action="action">
+                                                            <div class="input-item">
+                                                                <span>Email</span>
+                                                                <input type="text" placeholder="suzonabdullah1@yahoo.com" required="required" />
+                                                            </div>
+                                                            <div class="ch-save">
+                                                                <input type="submit" value="Save" />
+                                                                <input type="reset" value="Clear" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <h1 class="ch-title">Change Password</h1>
+                                                        <form action="action">
+                                                            <div class="input-item rel-pass">
+                                                                <span>Current password</span>
+                                                                <input class="type_password" type="password" id="oldpass" placeholder="Password" required/>
+                                                                <span class="show-pass">SHOW</span>
+                                                            </div>
+                                                            <div class="input-item rel-pass">
+                                                                <span>New password (min. 6 characters)</span>
+                                                                <input class="type_password" type="password" id="newpass" placeholder="Password" minlength="3" required/>
+                                                                <span class="show-pass">SHOW</span>
+                                                            </div>
+                                                            <div class="ch-save">
+                                                                <input type="submit" value="Save" />
+                                                                <input type="reset" value="Clear" />
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="divided-line col-md-12 col-sm-12 col-xs-12"></div>
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <div class="profile-info">
+                                                            <h1 class="ch-title">Profile information</h1>
+                                                            <div class="row">
+                                                                <form action="action">
+                                                                    <div class="col-md-6 col-sm-6">
+                                                                        <div class="input-item">
+                                                                            <span>First name</span>
+                                                                            <input type="text" placeholder="First Name" required/>
+                                                                        </div>
+                                                                        <div class="input-item">
+                                                                            <span>Year of birth</span>
+                                                                            <input type="text" required/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6">
+                                                                        <div class="input-item">
+                                                                            <span>Username</span>
+                                                                            <input type="text" placeholder="Username" required/>
+                                                                        </div>
+                                                                        <div class="input-item rel-pass">
+                                                                            <span>Country</span>
+                                                                            <select name="country" id="country">
+                                                                                <option value="us">United States</option>
+                                                                                <option value="uk">united kingdom</option>
+                                                                                <option value="us">United States</option>
+                                                                            </select>
+                                                                            <div class="down-i">
+                                                                                <i class="fa fa-angle-down"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 colsm-12 col-xs12">
+                                                                        <div class="item-gender">
+                                                                            <span>Gender</span>
+                                                                            <br />
+                                                                            <section>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="col-md-6 col-sm-3 col-xs-6">
+                                                                                        <div class="row">
+                                                                                            <div class="male">
+                                                                                                <input type="radio" name="person" id="radio-1" value="James" checked>
+                                                                                                <label for="radio-1"></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-6 col-sm-3 col-xs-6">
+                                                                                        <div class="row">
+                                                                                            <div class="female">
+                                                                                                <input type="radio" name="person" id="radio-2" value="Michael">
+                                                                                                <label for="radio-2"></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </section>
+                                                                        </div>
+                                                                        <div class="item-goal">
+                                                                            <span>Do you have a current transformation goal?</span>
+                                                                            <br/>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio01" name="radio" checked/>
+                                                                                <label for="radio01"><span></span>Fat Loss Transformation</label>
+                                                                            </div>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio02" name="radio" />
+                                                                                <label for="radio02"><span></span>Muscle Gain Transformation</label>
+                                                                            </div>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio03" name="radio" />
+                                                                                <label for="radio03"><span></span>Health & Fitness Lifestyle Transformation</label>
+                                                                            </div>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio04" name="radio" />
+                                                                                <label for="radio04"><span></span>Tone UP Transformation</label>
+                                                                            </div>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio05" name="radio" />
+                                                                                <label for="radio05"><span></span>Get In Shape For My Wedding</label>
+                                                                            </div>
+                                                                            <div class="goal">
+                                                                                <input type="radio" id="radio06" name="radio" />
+                                                                                <label for="radio06"><span></span>Other</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ch-save">
+                                                                            <input type="submit" value="Save" />
+                                                                            <input type="reset" value="Clear" />
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="exercise" role="tabpanel">
+                                            two
+                                        </div>
+                                        <div class="tab-pane fade" id="signup" role="tabpanel">
+                                            thee
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--account details section end-->
+    <!--subscribe section start-->
+    <div class="subscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-12">
+                    <div class="row">
+                        <div class="ht-newsletter">
+                            <h5>JOIN OUR NEWSLETTER</h5>
+                            <h2>subscribe <b>newsletter</b></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <div class="row">
+                        <form class="form-inline newsletter-forn-in">
+                            <div class="col-md-9  col-sm-9 col-xs-12">
+                                <div class="form-group">
+                                    <input class="form-control newsletter-input" type="text" placeholder="enter your email address">
+                                </div>
+                            </div>
+                            <div class="col-md-3  col-sm-3 col-xs-12">
+                                <div class="row text-center">
+                                    <button type="submit" class="subscribe-btn">subscribe<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--subscribe section end-->
+    <!--big footer section start-->
+    <div class="big-fotter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="trainer-aera">
+                        <div class="ft-trainer">
+                            <h2>Fitness <span>Trainer</span></h2>
+                            <h5>BEST FITNESS CLUB</h5>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                        <div class="contact-info">
+                            <ul>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="bld">100 highland ave, california,</span> united state</li>
+                                <li><i class="fa fa-envelope-square" aria-hidden="true"></i> contact@fitness.com</li>
+                                <li><a class="red" href=""><i class="fa fa-phone-square" aria-hidden="true"></i>www.fitnesstrainer.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="ft-info">
+                        <h2>Fitness<span> information</span></h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>about our shop</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>top Sellers</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>our blog</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>New Product</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Secure Shopping</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="ft-info">
+                        <h2>my <span> account</span></h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>my account</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>discount</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>personal information</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>my address</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>order history</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="banner">
+                        <h2>GET NEW OFFER </h2>
+                        <div class="banner-box">
+                            <h1>Fruits</h1>
+                            <h2><span>all</span> summer</h2>
+                            <p>35% off in june-july</p>
+                            <div class="shop-now"><a href="#">shop now</a>
+                                <div class="icon"><i class="fa fa-long-arrow-right"></i></div>
+                            </div>
+                            <img src="img/shop.png" alt="shop" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="sticky-fotter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6  col-xs-12">
+                        <div class="sticky-fotter-text">
+                            <p>&COPY; 2017 <b>fintness</b> made with <i class="fa fa-heart" aria-hidden="true"></i> by Youwes, All right reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6  col-xs-12">
+                        <div class="fotter-link">
+                            <nav>
+                                <ul class="link-list">
+                                    <li><a href="#">contact us</a></li>
+                                    <li><a href="#">term of use</a></li>
+                                    <li><a href="#">site map</a></li>
+                                    <li><a href="#">pricice policy</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <img src="img/bg/fotterbg.png" alt="" />
+                    <a class="go-top" href="#home"><i class="fa fa-arrow-circle-o-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/jquery.meanmenu.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.scrollUp.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.nstSlider.min.js"></script>
+    <script src="js/handleCounter.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

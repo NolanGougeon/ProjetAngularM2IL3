@@ -1,0 +1,68 @@
+<div class="content">
+        <div class="container"ng-controller="eventCtrl">
+<br></br>
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="m-b-30">
+                                <a href="#/addevent" id="addToTable" class="btn btn-success waves-effect waves-light" ng-if="session.type=='organisateur'">  Ajouter une vide dressing  <i class="mdi mdi-plus-circle-outline"></i></a>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-12">
+                            <div class="timeline">
+                                <article class="timeline-item alt">
+                                    <div class="text-right">
+                                        <div class="time-show first">
+                                            <a href="javascript:void(0);" class="btn btn-success w-lg">PROCHAINS GLA'VIDES DRESSING </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="timeline-item alt"ng-repeat="l in loadedevents">
+                                    <div class="timeline-desk">
+                                        <div class="panel">
+                                            <div class="timeline-box">
+                                                <span class="arrow-alt"></span>
+                                                <span class="timeline-icon  bg-success"><i class="mdi mdi-checkbox-blank-circle-outline"></i></span>
+                                                <h4 class="text-success">{{l.name_event}}</h4>
+                                                <p class="timeline-date text-muted"><small>{{l.date}}</small></p>
+                                                <p><i class="mdi mdi-map-marker-radius m-r-5"></i> {{l.lieu}}</p>
+                                                <button  class="btn btn-danger" ng-click="AbortEvent(l.id_event)" ng-if="l.event_statut!='start' && session.type=='organisateur'">Annuler <i class="fa fa-trash-o"></i></button>
+                                                <a href="#/editevent/{{l.id_event}}" ng-if="l.event_statut!='start' && session.type=='organisateur'" class="btn btn-default "> <i class="fa fa-pencil"></i></a>
+                                                <button  class="btn btn-success"  ng-if="l.date==l.current_date && l.event_statut!='start' && session.type=='organisateur' " ng-click="StartEvent(l)">Demarrer la vente<i class="fa fa-start"></i></button>
+                                                <button  class="btn btn-warning" ng-show="l.event_statut=='start' && session.type=='organisateur' " ng-click="CloseEvent(l.id_event)">Cloturer le vide<i class="fa fa-start"></i></button>
+                                                
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="timeline-item alt">
+                                        <div class="text-right">
+                                            <div class="time-show first">
+                                                <a href="javascript:void(0);" class="btn btn-danger w-lg">GLA'VIDES DRESSING ANNULES</a>
+                                            </div>
+                                        </div>
+                                </article>
+                                <article class="timeline-item " ng-repeat="lo in loadedabortedevents">
+                                    <div class="timeline-desk">
+                                        <div class="panel">
+                                            <div class="timeline-box">
+                                                <span class="arrow"></span>
+                                                <span class="timeline-icon bg-danger"><i class="mdi mdi-checkbox-blank-circle-outline"></i></span>
+                                                <h4 class="text-danger">{{lo.name_event}}</h4>
+                                                <p class="timeline-date text-muted"><small>{{lo.date}}</small></p>
+                                                <p><i class="mdi mdi-map-marker-radius m-r-5"></i> {{lo.lieu}}</p>                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                
+                            </div>
+                        </div>
+                    </div>
+    
+        </div>
+    </div>
+
+

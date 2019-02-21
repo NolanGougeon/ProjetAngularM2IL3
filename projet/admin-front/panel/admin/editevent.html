@@ -1,0 +1,37 @@
+<div class="content">
+        <div class="container" ng-controller="listesCtrl">
+                <br></br>
+            <h4 class="header-title m-t-0">MODIFIER UN GLA'VIDE DRESSING</h4>
+            <div class="p-20">
+                    <form action="#" data-parsley-validate novalidate>
+                        <div class="form-group">
+                            <label for="userName">Nom de l'event<span class="text-danger">*</span></label>
+                            <input type="text"  parsley-trigger="change" required
+                                   placeholder="Entrer un nom" class="form-control"   ng-model="thisevent.name_event ">
+                        </div>
+                        <div class="form-group">
+                                <label for="userName">Date<span class="text-danger">*</span></label>
+                                <input type="text"  parsley-trigger="change" required
+                                       placeholder="Entrer une somme" class="form-control" ng-model="thisevent.date">
+                                <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker">
+                                <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="userName">Lieu<span class="text-danger">*</span></label>
+                                <input type="text"  parsley-trigger="change" required
+                                       placeholder="soit XS,S,M,L,XL,XXL,XXXL" class="form-control"  ng-model="thisevent.lieu">
+                        </div>
+                        <div class="form-group text-right m-b-0">
+                            <a class="btn btn-primary waves-effect waves-light" ng-click="EditEvent(thisevent.name_event,thisevent.date,thisevent.lieu)">
+                                Enregistrer
+                            </a>
+                            <a href="#/events/" class="btn btn-default waves-effect m-l-5">
+                                Retour
+                            </a>
+                        </div>
+        
+                    </form>
+                </div>
+
+        </div>
+    </div>

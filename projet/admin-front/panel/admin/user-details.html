@@ -1,0 +1,181 @@
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Utilisateur</h4>
+
+                    <ol class="breadcrumb p-0 m-0">
+                        <li>
+                            <a href="#/"> <i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li class="active">
+                            Details
+                        </li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4">
+
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="thumb-xl member-thumb m-b-10 center-block">
+                            <img src="../public/assets/images/users/avatar-1.jpg" class="img-circle img-thumbnail" alt="profile-image">
+                            <i class="mdi mdi-star-circle member-star text-success" title="verified user"></i>
+                        </div>
+
+                        <div class="">
+                            <h4 class="m-b-5" ng-bind="(user.nom +' '+ user.prenom )"></h4>
+                            <p class="text-muted" ng-bind="( '@'+user.trigramme )"></p>
+                        </div>
+
+                        <button type="button" ng-if="user.type!='organisateur'"  ng-click="confirmeDelete(user)"
+                                class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light" data-toggle="modal" data-target="#myModal">
+                            <i class="fa fa-trash-o"> </i> Supprimer Le compte
+                        </button>
+
+
+                        <p class="text-muted font-13 m-t-20">
+                            Vous êtes inscrit sur notre platerforme en tant que {{user.type}}. Merci de lire
+                            <span class="text-muted">les conditions d'utilisation </span>
+                        </p>
+
+                        <hr/>
+
+                        <div class="text-left">
+                            <p class="text-muted font-13"><strong>Nom et prénom :</strong> <span class="m-l-15" ng-bind="(user.nom +' '+session.prenom | uppercase )"></span></p>
+
+                            <p class="text-muted font-13"><strong>Mobile :</strong><span class="m-l-15" ng-bind="(user.numero)"></span></p>
+
+                            <p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15" ng-bind="(user.email)"></span></p>
+
+                            <p class="text-muted font-13"><strong>Location :</strong> <span class="m-l-15" ng-bind="(user.adresse)"></span></p>
+                        </div>
+
+                        <ul class="social-links list-inline m-t-30">
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div> <!-- end card-box -->
+
+            </div> <!-- end col -->
+
+            <div class="col-lg-9 col-md-8">
+
+                <form class="form-horizontal" role="form" name="updateForm">
+
+
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Civilite</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" readonly ng-model="user.civilite">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Nom</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" readonly ng-model="user.nom">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Prenom</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.prenom" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">email</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.email" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Naissance</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.dateNaissance" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label">Numéro </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"  readonly ng-model="user.numero">
+                            </div>
+                        </div>
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label">Adresse </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"  readonly ng-model="user.adresse">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </form>
+
+
+
+            </div>
+        </div>
+        <!-- end row -->
+
+
+    </div> <!-- container -->
+
+</div>
+<!-- content -->
+
+
+
+
+<!-- sample modal content -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Suppression de compte</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Condition de suppression</h4>
+                <p>Aucun retour en arriere ne sera possible apres cette suppression.</p>
+                <hr>
+                <p> J'en suis responsable voulez-vous continuer ?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger waves-effect waves-light" ng-click="delete(toDelete)">Oui je supprime</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

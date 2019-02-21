@@ -1,0 +1,62 @@
+
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Changer la présentation</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col-md-12">
+                <div class="card-box">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#in-wait"  id="recharger" title=" juste a test" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                <span class=""><i class="fa fa-pencil"></i></span>
+                                <span class="hidden-xs">Changer La présentation</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="in-wait">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-border panel-danger">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Entrez le nouveau texte de presentation</h3>
+                                            <form>
+                                                <div class="form-group">
+                                                    <!--ng-model directive binds an input to a property on the scope using NgModelController-->
+                                                     <input type="text" class="form-control" ng-model="texte.description" placeholder="Enter le neveau texte">
+                                                     <small class="form-text text-muted"> </small>
+                                                     <div class="summernote">
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" ng-click="modifyText(texte.description);">Enregistrer</button>
+                                            </form>
+                                        </div>
+                                        <div class="panel-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+
+
+    </div> <!-- container -->
+
+</div>
+<!-- content -->

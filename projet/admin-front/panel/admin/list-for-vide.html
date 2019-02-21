@@ -1,0 +1,178 @@
+
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Liste des demandes</h4>
+
+                    <ol class="breadcrumb p-0 m-0">
+                        <li>
+                            <a href="#/">Accueil</a>
+                        </li>
+                        <li class="active">
+                            Les demandes
+                        </li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card-box">
+                    <!--<h4 class="header-title m-t-0 m-b-30">Tabs Bordered</h4>-->
+
+                    <ul class="nav nav-tabs">
+
+                        <li class="active">
+                            <a href="#in-wait"  id="recharger" title=" juste a test" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                <span class=""><i class="fa fa-balance-scale"></i></span>
+                                <span class="hidden-xs">Liste à Valider</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#in-done" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                <span class=""><i class="fa fa-calendar-check-o"></i></span>
+                                <span class="hidden-xs">Liste Validée et Information</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="in-wait">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="panel panel-border panel-danger">
+
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"> </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <table id="datatable-buttons" class="table table-hover table-striped m-0 table-colored-bordered table-bordered-inverse">
+                                                <thead>
+                                                <tr>
+                                                    <th>N°</th>
+                                                    <th>Libellé Liste</th>
+                                                    <th>Date Creation</th>
+                                                    <th>STATUT</th>
+                                                    <th>Vendeur</th>
+                                                    <th>VIDE DRESSING</th>
+                                                    <th>Date Du VIDE DRESSING</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                                </thead>
+
+
+                                                <tbody>
+                                                <tr ng-repeat="ls in listes">
+                                                    <td>{{$index+1}}</td>
+                                                    <td>{{ls.nom_liste}}</td>
+                                                    <td>{{ls.date_creation}}</td>
+                                                    <td>
+                                                        {{ls.statut}}
+                                                        <span ng-if="ls.statut=='soumis'" class="m-l-5 ">
+                                                            <i class="fa fa-hourglass-1"></i>
+                                                        </span>
+                                                    </td>
+                                                    <td>{{ls.nom | uppercase}} {{ls.prenom}}</td>
+                                                    <td> {{ls.name_event}}</td>
+                                                    <td> {{ls.date_event}}</td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" title=" effectuer un operation" class="btn btn-brown btn-sm dropdown-toggle waves-effect" data-toggle="dropdown" aria-expanded="false">
+                                                                Action <span class="caret"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <!--<li>-->
+                                                                    <!--<a ng-href="#/listes-view/{{ls.numListe}}" class="btn btn-info waves-effect waves-light">-->
+                                                                        <!--<i class="fa fa-eye m-r-5"></i> Voir-->
+                                                                    <!--</a>-->
+                                                                <!--</li>-->
+                                                                <li>
+                                                                    <a ng-href="#/listes/{{ls.numListe}}" class="btn btn-info waves-effect waves-light">
+                                                                        <i class="fa fa-eye m-r-5"></i> Voir
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:void(0);" class="btn btn-success waves-effect waves-light"
+                                                                      ng-hide="ls.statut=='acceptee'"  ng-click="validation(ls)" data-toggle="modal" data-target="#myModal">
+                                                                        <i class="fa fa-check m-r-5"></i> Valider
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane" id="in-done">
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="panel panel-border panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Recap Validation</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+
+
+    </div> <!-- container -->
+
+</div>
+<!-- content -->
+
+
+<!-- sample modal content -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Validation de Liste </h4>
+            </div>
+            <div class="modal-body">
+                <h4>Attention vous vous appretez à valider une liste</h4>
+                <p>Aucun retour en arriere ne sera possible apres cette Opération.</p>
+                <hr>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger waves-effect waves-light" data-dismiss="modal" ng-click="updateStatus(listeToUpdate)">Oui je Valide</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,224 @@
+<!-- hero-section-start -->
+<div class="hero-section" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hero-content">
+                    <h1 class="hc-header">GlaZik'Actu</h1>
+                    <p class="hc-text">Les infos et astuces par GlaZik Gym</p>
+                </div>
+            </div>
+        </div>
+        <div class="crumbs">
+            <nav>
+                <ul class="crumb">
+                    <li><a class="crumb-home" href="#/"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#/">Accueil<i class="fa fa-angle-right"></i></a></li>
+                    <li><a class="active" href="#/blog">GlaZik'Actu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- hero-section-end -->
+<!--three column section start-->
+<div class="three-clm-section" ng-controller="blogCtrl">
+    <div class="container">
+        <div class="category-clm col-md-2">
+            <div class="banner-ad">
+                    <img src="public/img/banner/banner.jpg" alt="banner" />
+            </div>
+            <div class="banner-ad">
+                    <img src="public/img/banner/banner.jpg" alt="banner" />
+            </div>
+            <div class="banner-ad">
+                    <img src="public/img/banner/banner.jpg" alt="banner" />
+            </div>
+        </div>
+        <div class="articles-area col-md-7 col-sm-8">
+            <div class="latest-articles">
+                <h1>Le tout nouveau</h1>
+                <div class="lts-item">
+                    <img src="public/img/article/letest_article.jpg" alt="" />
+                    <div class="article-info-area">
+                        <div class="article-info">
+                            <div class="single-inf">
+                                <i class="fa fa-clock-o"></i>
+                                <span>{{latest.date}}</span>
+                            </div>
+                            <div class="single-inf">
+                                <i class="fa fa-eye"></i>
+                                <span>{{latest.vue}}</span>
+                            </div>
+                        </div>
+                        <h1><a href="#/blog/{{latest.id}}">{{latest.contenu|limitTo:100}}</a></h1>
+                    </div>
+                    <div class="article-tag">
+                        <p>SPORTS</p>
+                    </div>
+                </div>
+            </div>
+            <!--gride item start-->
+            <div class="grid-three">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6" ng-repeat="a in all" >
+                        <div class="grid-th-item">
+                            <div class="article-thumb">
+                                <img src="public/img/blog/grid-blog1.jpg" alt="" />
+                                <div class="article-tag">
+                                    <p>{{a.nom_cat}}</p>
+                                </div>
+                            </div>
+                            <div class="th-info-area">
+                                <div class="article-info">
+                                    <div class="single-inf">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>{{a.date}}</span>
+                                    </div>
+                                    <div class="single-inf">
+                                        <i class="fa fa-eye"></i>
+                                        <span>{{a.vue}}</span>
+                                    </div>
+                                    <!-- <div class="single-inf">
+                                        <i class="fa fa-heart-o"></i>
+                                        <span></span>
+                                    </div> -->
+                                </div>
+                                <h1><a ng-href="#/blog/{{a.id}}">{{a.contenu|limitTo:100}}...</a></h1>
+                                <a class="read-more" ng-href="#/blog/{{a.id}}">Lire la suite <i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4 col-sm-6">
+                        <div class="grid-th-item">
+                            <div class="article-thumb">
+                                <img src="public/img/blog/grid-blog2.jpg" alt="" />
+                                <div class="article-tag">
+                                    <p>TECHNOLOGY</p>
+                                </div>
+                            </div>
+                            <div class="th-info-area">
+                                <div class="article-info">
+                                    <div class="single-inf">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>Nov 1,2017</span>
+                                    </div>
+                                    <div class="single-inf">
+                                        <i class="fa fa-eye"></i>
+                                        <span>15k</span>
+                                    </div>
+                                    <div class="single-inf">
+                                        <i class="fa fa-heart-o"></i>
+                                        <span>278</span>
+                                    </div>
+                                </div>
+                                <h1><a href="#">Sam Explains How She is Still in Incredible Shape</a></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="grid-th-item">
+                            <div class="article-thumb">
+                                <img src="public/img/blog/grid-blog3.jpg" alt="" />
+                                <div class="article-tag">
+                                    <p>EDUCATION</p>
+                                </div>
+                            </div>
+                            <div class="th-info-area">
+                                <div class="article-info">
+                                    <div class="single-inf">
+                                        <i class="fa fa-clock-o"></i>
+                                        <span>Nov 1,2017</span>
+                                    </div>
+                                    <div class="single-inf">
+                                        <i class="fa fa-eye"></i>
+                                        <span>15k</span>
+                                    </div>
+                                    <div class="single-inf">
+                                        <i class="fa fa-heart-o"></i>
+                                        <span>278</span>
+                                    </div>
+                                </div>
+                                <h1><a href="blog-details.html">Japan in Four Corgeous Pokemon=Themed Colors</a></h1>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!--listed blog section-->
+            <!-- <div class="listed-blog-post">
+                <div class="row">
+                    <div class="latest-blog">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="blog-img">
+                                <img src="public/img/blog/blog1.jpg" alt="blog thumbnail" />
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="blog-info">
+                                <div class="th-info-area">
+                                    <div class="article-info">
+                                        <div class="single-inf">
+                                            <i class="fa fa-clock-o"></i>
+                                            <span>Nov 1,2017</span>
+                                        </div>
+                                        <div class="single-inf">
+                                            <i class="fa fa-eye"></i>
+                                            <span>15k</span>
+                                        </div>
+                                        <div class="single-inf">
+                                            <i class="fa fa-heart-o"></i>
+                                            <span>278</span>
+                                        </div>
+                                    </div>
+                                    <h1><a href="#">What's the difference between a cold and the flu?</a></h1>
+                                    <p>The common cold and the flu may seem similar at first. They are both respiratory illnesses and</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest-blog">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="blog-img">
+                                <img src="public/img/blog/blog2.jpg" alt="blog thumbnail" />
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="blog-info">
+                                <div class="th-info-area">
+                                    <div class="article-info">
+                                        <div class="single-inf">
+                                            <i class="fa fa-clock-o"></i>
+                                            <span>Nov 1,2017</span>
+                                        </div>
+                                        <div class="single-inf">
+                                            <i class="fa fa-eye"></i>
+                                            <span>15k</span>
+                                        </div>
+                                        <div class="single-inf">
+                                            <i class="fa fa-heart-o"></i>
+                                            <span>278</span>
+                                        </div>
+                                    </div>
+                                    <h1><a href="blog-details.html">The 5 Moves Everyone Should Be Able to Do Everyday</a></h1>
+                                    <p>The common cold and the flu may seem similar at first. They are both respiratory illnesses and</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="most-populer col-md-3">
+            <h1 class="bdr-top-title">Les plus consultés</h1>
+            <div class="populer-item" ng-repeat="mp in mostpopular">
+                <h2><a href="#/blog/{{mp.id}}">{{mp.titre}}</a></h2>
+                <p class="p-t-cat">{{mp.nom_cat}}</p>
+            </div>
+            <div class="banner-ad">
+                <img src="public/img/banner/banner.jpg" alt="banner" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--three column section end-->

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Fitness Trainer || Product Single Page</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/handle-counter.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#scroll-menu" data-offset="100">
+    <!-- preloader -->
+    <div id="preloader"></div>
+    <!-- header-start -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="header-top-left">
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="header-top-right">
+                            <div class="single-htr">
+                                <i class="fa fa-shopping-basket"></i>
+                                <span>0 iteam - 00$</span>
+                            </div>
+                            <div class="single-htr">
+                                <i class="fa fa-key"></i>
+                                <span id="sign_in">Sign in</span>
+                                <div id="sign_in_form" class="signin-form-area">
+                                    <div class="signin-form-area-top">
+                                        <h3>Fitness <span class="h-light">Trainer</span></h3>
+                                        <h6>BEST FITNESS CLUB</h6>
+                                        <div class="signin-form">
+                                            <form action="#">
+                                                <div class="signin-inputs">
+                                                    <div class="input-email">
+                                                        <input class="femail" type="text" placeholder="Email" required="">
+                                                    </div>
+                                                    <div class="input-password">
+                                                        <input class="fpass type_password" type="password" placeholder="Password" required="">
+                                                        <span class="show-pass">Show</span>
+                                                    </div>
+                                                </div>
+                                                <div class="remember-recover clearfix">
+                                                    <div class="remember">
+                                                        <input type="checkbox">
+                                                        <span>Remember me</span>
+                                                    </div>
+                                                    <div class="recover">
+                                                        <a href="#">Recover password</a>
+                                                    </div>
+                                                </div>
+                                                <button class="sign-in-btn hover-bs">SIGN IN</button>
+                                                <div class="signin-or">
+                                                    <span>OR</span>
+                                                </div>
+                                            </form>
+                                            <button class="reg-by-fb-btn hover-bs">REGISTER WITH FACEBOOK</button>
+                                        </div>
+                                    </div>
+                                    <div class="reg-account">
+                                        <p>Don’t have an account?<a href="#">Register</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-htr">
+                                <i class="fa fa-user-times"></i>
+                                <span id="top_reg">Register</span>
+                                <div class="register-form-area" id="top_reg_form">
+                                    <div class="rf-head">
+                                        <span class="rfa-close" id="rfa_close"><i class="fa fa-times"></i></span>
+                                        <img src="public/img/logo-reg.png" alt="">
+                                        <p>Join a community of over 4000 people</p>
+                                    </div>
+                                    <div class="rf-body clearfix">
+                                        <div class="rf-body-or-area">
+                                            <span>or</span>
+                                        </div>
+                                        <div class="rf-body-left">
+                                            <form action="#">
+                                                <div class="rf-inputs-area">
+                                                    <div class="rf-input-email rf-inputs">
+                                                        <input class="rf-email" type="email" placeholder="Email" required="">
+                                                    </div>
+                                                    <div class="rf-input-name rf-inputs">
+                                                        <input class="rf-name" type="text" placeholder="First name" required="">
+                                                    </div>
+                                                    <div class="rf-input-username rf-inputs">
+                                                        <input class="rf-username" type="text" placeholder="Username" required="">
+                                                    </div>
+                                                    <div class="rf-input-password rf-inputs">
+                                                        <input class="rf-password type_password" type="password" placeholder="Password" required="">
+                                                        <span class="show-pass">Show</span>
+                                                    </div>
+                                                </div>
+                                                <div class="rf-checkbox-area">
+                                                    <input type="checkbox">
+                                                    <p>Sign me up for occasional newslettes and special offers</p>
+                                                </div>
+                                                <button class="register-btn hover-bs">REGISTER</button>
+                                            </form>
+                                        </div>
+                                        <div class="rf-body-right">
+                                            <button class="reg-by-fb-btn hover-bs">REGISTER WITH FACEBOOK</button>
+                                            <p>We wont post to Facebook withour your permission</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-area hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="about-us.html">ABOUT US</a>
+                                        <ul class="singel-dropdown">
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a>
+                                                <ul class="single-thirdlevel-menu">
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="success-story.html">SUCCESS STORY</a></li>
+                                    <li><a href="event.html">EVENT</a></li>
+                                    <li><a href="blog.html">BLOG</a></li>
+                                    <li><a href="shop.html">SHOP</a></li>
+                                    <li><a href="contact.html">CONTACT</a>
+                                    </li>
+                                    <li><a href="index.html">PAGES</a>
+                                        <div class="single-megamenu">
+                                            <span>
+                                                <a href="index.html">Home</a>
+                                                <a href="about-us.html">About Us</a>
+                                                <a href="blog.html">Blog</a>
+                                                <a href="blog-details.html">Blog Details</a>
+                                                <a href="event.html">Event</a>
+                                                <a href="event-details.html">Event Details</a>
+                                                <a href="pricing-table.html">Pricing Table</a>
+                                            </span>
+                                            <span>
+                                                <a href="shop.html">Shop</a>
+                                                <a href="product-single-page.html">Product Single</a>
+                                                <a href="success-story.html">Success Story</a>
+                                                <a href="success-story-details.html">Success Story Details</a>
+                                                <a href="about-trainer.html">About Trainer</a>
+                                                <a href="contact.html">Contact</a>
+                                                <a href="my-account.html">My Account</a>
+                                            </span>
+                                            <span>
+                                                <a href="exercise-plan.html">Exercise Plan</a>
+                                                <a href="exercise-plan-details.html">Exercise Plan Details</a>
+                                                <a href="forgot-password.html">Forgot Password</a>
+                                                <a href="login.html">Login</a>
+                                                <a href="registration.html">Registration</a>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="top-search">
+                            <form action="#">
+                                <span id="search_icon" class="search-icon"><i class="fa fa-search"></i></span>
+                                <button class="search-text">SEARCH</button>
+                                <input id="search_box" class="search-box" type="text" required="" placeholder="Search Here">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-area visible-xs visible-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mobile_menu">
+                            <nav id="mobile_menu_active">
+                                <ul>
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="about-us.html">ABOUT US</a>
+                                        <ul>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a></li>
+                                            <li><a href="#">Dropdown Demo</a>
+                                                <ul>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                    <li><a href="#">Thirdlevel Menu Demo</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="success-story.html">SUCCESS STORY</a></li>
+                                    <li><a href="event.html">EVENT</a></li>
+                                    <li><a href="blog.html">BLOG</a></li>
+                                    <li><a href="shop.html">SHOP</a></li>
+                                    <li><a href="contact.html">CONTACT</a>
+                                    </li>
+                                    <li><a href="index.html">PAGES</a>
+                                        <ul>
+                                            <a href="index.html">Home</a>
+                                            <a href="about-us.html">About Us</a>
+                                            <a href="blog.html">Blog</a>
+                                            <a href="blog-details.html">Blog Details</a>
+                                            <a href="event.html">Event</a>
+                                            <a href="event-details.html">Event Details</a>
+                                            <a href="pricing-table.html">Pricing Table</a>
+                                            <a href="shop.html">Shop</a>
+                                            <a href="product-single-page.html">Product Single</a>
+                                            <a href="success-story.html">Success Story</a>
+                                            <a href="success-story-details.html">Success Story Details</a>
+                                            <a href="about-trainer.html">About Trainer</a>
+                                            <a href="contact.html">Contact</a>
+                                            <a href="my-account.html">My Account</a>
+                                            <a href="exercise-plan.html">Exercise Plan</a>
+                                            <a href="exercise-plan-details.html">Exercise Plan Details</a>
+                                            <a href="forgot-password.html">Forgot Password</a>
+                                            <a href="login.html">Login</a>
+                                            <a href="registration.html">Registration</a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- hero-section-start -->
+    <div class="hero-section" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="hero-content">
+                        <h1 class="hc-header">Online Personal Training</h1>
+                        <p class="hc-text">Maximum Results in Minimum Time, no matter your location</p>
+                        <a class="hc-link" href="#">SELECT YOUR PLAN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="crumbs">
+                <nav>
+                    <ul class="crumb">
+                        <li><a class="crumb-home" href="#"><i class="fa fa-home"></i></a></li>
+                        <li><a href="pages.html">Pages<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="shop.html">Shop<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Product Details<i class="fa fa-angle-right"></i></a></li>
+                        <li><a class="single-pr" href="#">Fintness Runner T-890</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- hero-section-end -->
+    <div class="single-pro-area">
+        <div class="container">
+            <div class="single-product">
+                <div class="col-md-7 col-xs-12">
+                    <div class="product-img-area">
+                        <div class="product-img">
+                            <div class="owl-carousel" id="demopro">
+                                <div class="pro-single-img">
+                                    <img src="img/product/product_single.jpg" alt="product_image" />
+                                </div>
+                                <div class="pro-single-img">
+                                    <img src="img/product/product_single.jpg" alt="product_image" />
+                                </div>
+                                <div class="pro-single-img">
+                                    <img src="img/product/product_single.jpg" alt="product_image" />
+                                </div>
+                            </div>
+                            <div class="r-top">
+                                <p>NEW</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-12">
+                    <div class="product-desc-area">
+                        <h5 class="pro-cat">Machine</h5>
+                        <h3 class="pro-title">Fintness Runner T-890</h3>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <span class="read-v">Read 3 reviews</span>
+                        </div>
+                        <p class="pro-desc">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+                        <h5 class="item-price"> <del><i class="fa fa-usd"></i>99.00</del> <i class="fa fa-usd"></i>69.00</h5>
+                        <div class="pro-size">
+                            <span>size:</span>
+                            <ul>
+                                <li>xs</li>
+                                <li>s</li>
+                                <li class="active">m</li>
+                                <li>l</li>
+                                <li>xl</li>
+                            </ul>
+                        </div>
+                        <div class="quantity-area">
+                            <div class="handle-counter" id="handleCounter3">
+                                <button class="counter-minus">-</button>
+                                <input type="text" value="2">
+                                <button class="counter-plus">+</button>
+                            </div>
+                            <a href="#" class="add-to-cart">add to cart</a>
+                        </div>
+                        <div class="tag-ar">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h5>tags:</h5></td>
+                                    <td>
+                                        <a href="#">Fitness,</a>
+                                        <a href="#">Clothes,</a>
+                                        <a href="#">Fashion,</a>
+                                        <a href="#">Shop,</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="share-ar">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h5>share:</h5></td>
+                                    <td>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-description-area">
+                    <nav>
+                        <ul class="pro-desc-menu">
+                            <li class="active"><a data-toggle="tab" href="#desc">Description</a></li>
+                            <li><a data-toggle="tab" href="#additional">Additional Information</a></li>
+                            <li><a data-toggle="tab" href="#review">Reviews (3)</a></li>
+                        </ul>
+                    </nav>
+                    <div class="pro-review">
+                        <div class="tab-content">
+                            <div id="desc" class="tab-pane fade">
+                                <h3 class="pro-title">Fintness Runner T-890</h3>
+                                <ul>
+                                    <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>LCD window (size: 11x 6cm) with blue backlight</li>
+                                    <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Provide 12 pre-set programs and 1 manual</li>
+                                    <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Body fat function</li>
+                                    <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Wheels for transportation</li>
+                                    <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>display(speed,incline,time,distance)</li>
+                                </ul>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                    <br /> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                            <div id="additional" class="tab-pane fade in active">
+                                <h1>Additional Information:</h1>
+                                <table>
+                                    <tr>
+                                        <th>Material:</th>
+                                        <td>Cotton</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sleeve Type:</th>
+                                        <td>Half Sleeve</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Neck Type:</th>
+                                        <td>Polo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fit Type:</th>
+                                        <td>Regular Fit</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Color:</th>
+                                        <td>Black, Brown, White, Gray, Violet</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Size:</th>
+                                        <td>Small, Medium, Large</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="review" class="tab-pane fade">
+                                <!--review section-->
+                                <div class="comments-section">
+                                    <div class="sngl-comment-area">
+                                        <div class="single-comment">
+                                            <div class="user-img-cmnt"><img src="img/user-image/user1.jpg" alt="user_image" /></div>
+                                            <div class="comment-detail">
+                                                <h1 class="user-name">fedral dandfir <span class="date">15 Sep, 2015</span></h1>
+                                                <p class="comment">I have always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you.</p>
+                                            </div>
+                                        </div>
+                                        <div class="reply-comment">
+                                            <div class="user-img-cmnt"><img src="img/user-image/user2.jpg" alt="user_image" /></div>
+                                            <div class="comment-detail">
+                                                <h1 class="user-name">fedral dandfir <span class="date">15 Sep, 2015</span></h1>
+                                                <p class="comment">I have always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sngl-comment-area">
+                                        <div class="single-comment">
+                                            <div class="user-img-cmnt"><img src="img/user-image/user3.jpg" alt="user_image" /></div>
+                                            <div class="comment-detail">
+                                                <h1 class="user-name">fedral dandfir <span class="date">15 Sep, 2015</span></h1>
+                                                <p class="comment">I have always wanted to have a neighbor just like you. I've always wanted to live in a neighborhood with you.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--leave a comment-->
+                                <div class="contact-form">
+                                    <h1>Leave Your Comment</h1>
+                                    <div class="cf-msg"></div>
+                                    <form action="mail.php" method="post" id="cf">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <label for="name">name *</label>
+                                                <input type="text" id="name" class="focus" name="name">
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <label for="name">email address *</label>
+                                                <input type="text" id="email" name="email" class="focus">
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <label for="name">Your comments *</label>
+                                                <textarea class="focus" id="msg" name="msg"></textarea>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <button class="cont-submit" id="submit" name="submit">post comment</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--single product section end-->
+    <!--related product section start-->
+    <div class="related-pro">
+        <div class="container">
+            <h1 class="rel-pro-t">Related Products</h1>
+            <div class="owl-carousel" id="related-pro">
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rel-item">
+                    <div class="product-item">
+                        <div class="p-single-item">
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <div class="r-top">
+                                    <p>top</p>
+                                </div>
+                            </div>
+                            <h1>Fintness Runner T-890</h1>
+                            <h5 class="item-price"><i class="fa fa-usd"></i>12.00</h5>
+                            <img class="img1" src="img/product/product1.png" alt="product" />
+                            <img class="img2" src="img/product/product2.png" alt="product" />
+                            <div class="car-hover">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                                <a href="#"><i class="fa fa-expand"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--related product section end-->
+    <!--subscribe section start-->
+    <div class="subscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-5 col-xs-12">
+                    <div class="row">
+                        <div class="ht-newsletter">
+                            <h5>JOIN OUR NEWSLETTER</h5>
+                            <h2>subscribe <b>newsletter</b></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <div class="row">
+                        <form class="form-inline newsletter-forn-in">
+                            <div class="col-md-9  col-sm-9 col-xs-12">
+                                <div class="form-group">
+                                    <input class="form-control newsletter-input" type="text" placeholder="enter your email address">
+                                </div>
+                            </div>
+                            <div class="col-md-3  col-sm-3 col-xs-12">
+                                <div class="row text-center">
+                                    <button type="submit" class="subscribe-btn">subscribe<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--subscribe section end-->
+    <!--big footer area-->
+    <div class="big-fotter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="trainer-aera">
+                        <div class="ft-trainer">
+                            <h2>Fitness <span>Trainer</span></h2>
+                            <h5>BEST FITNESS CLUB</h5>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+                        <div class="contact-info">
+                            <ul>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="bld">100 highland ave, california,</span> united state</li>
+                                <li><i class="fa fa-envelope-square" aria-hidden="true"></i> contact@fitness.com</li>
+                                <li><a class="red" href=""><i class="fa fa-phone-square" aria-hidden="true"></i>www.fitnesstrainer.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="ft-info">
+                        <h2>Fitness<span> information</span></h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>about our shop</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>top Sellers</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>our blog</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>New Product</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Secure Shopping</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="ft-info">
+                        <h2>my <span> account</span></h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>my account</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>discount</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>personal information</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>my address</a></li>
+                            <li><a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>order history</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12">
+                    <div class="banner">
+                        <h2>GET NEW OFFER </h2>
+                        <div class="banner-box">
+                            <h1>Fruits</h1>
+                            <h2><span>all</span> summer</h2>
+                            <p>35% off in june-july</p>
+                            <div class="shop-now"><a href="#">shop now</a>
+                                <div class="icon"><i class="fa fa-long-arrow-right"></i></div>
+                            </div>
+                            <img src="img/shop.png" alt="shop" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="sticky-fotter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6  col-xs-12">
+                        <div class="sticky-fotter-text">
+                            <p>&COPY; 2017 <b>fintness</b> made with <i class="fa fa-heart" aria-hidden="true"></i> by Youwes, All right reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6  col-xs-12">
+                        <div class="fotter-link">
+                            <nav>
+                                <ul class="link-list">
+                                    <li><a href="#">contact us</a></li>
+                                    <li><a href="#">term of use</a></li>
+                                    <li><a href="#">site map</a></li>
+                                    <li><a href="#">pricice policy</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <img src="img/bg/fotterbg.png" alt="" />
+                    <a class="go-top" href="#home"><i class="fa fa-arrow-circle-o-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/jquery.meanmenu.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.scrollUp.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.nstSlider.min.js"></script>
+    <script src="js/handleCounter.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

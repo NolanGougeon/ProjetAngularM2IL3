@@ -1,0 +1,174 @@
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Utilisateur</h4>
+
+                    <ol class="breadcrumb p-0 m-0">
+                        <li>
+                            <a href="#/">Details</a>
+                        </li>
+                        <li class="active">
+                            Create
+                        </li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4">
+
+                <div class="text-center card-box">
+                    <div class="member-card">
+                        <div class="thumb-xl member-thumb m-b-10 center-block">
+                            <img src="../public/assets/images/users/avatar-1.jpg" class="img-circle img-thumbnail" alt="profile-image">
+                            <i class="mdi mdi-star-circle member-star text-success" title="verified user"></i>
+                        </div>
+
+                        <div class="">
+                            <h4 class="m-b-5" ng-bind="(user.nom +' '+ user.prenom)"></h4>
+                            <p class="text-muted" ng-bind="('@newUtilisateur')"></p>
+                        </div>
+
+                        <p class="text-muted font-13 m-t-20">
+                            Vous êtes inscrit sur notre platerforme en tant que {{user.typeUser}}. Merci de lire
+                            <span class="text-muted">les conditions d'utilisation </span>
+                        </p>
+
+                        <hr/>
+
+                        <div class="text-left">
+                            <p class="text-muted font-13"><strong>Nom et prénom :</strong> <span class="m-l-15" ng-bind="(user.nom +' '+user.prenom | uppercase )"></span></p>
+
+                            <p class="text-muted font-13"><strong>Mobile :</strong><span class="m-l-15" ng-bind="(user.numero)"></span></p>
+
+                            <p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15" ng-bind="(user.email)"></span></p>
+
+                            <p class="text-muted font-13"><strong>Location :</strong> <span class="m-l-15" ng-bind="(user.adresse)"></span></p>
+                        </div>
+
+                        <ul class="social-links list-inline m-t-30">
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div> <!-- end card-box -->
+
+            </div> <!-- end col -->
+
+            <div class="col-lg-9 col-md-8">
+
+                <form class="form-horizontal" role="form" name="newUserForm">
+
+
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Civilite</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.civilite" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Nom</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control"  ng-model="user.nom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Prenom</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.prenom" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Naissance</label>
+                            <div class="col-md-10">
+                                <input type="date" class="form-control" ng-model="user.dateNaissance" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label" required >Numéro </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" required ng-model="user.numero">
+                            </div>
+                        </div>
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label">Adresse </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control"  required ng-model="user.adresse">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">email</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" ng-model="user.email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label">Password </label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control"  required ng-model="user.password">
+                            </div>
+                        </div>
+
+                        <div class="form-group  has-feedback">
+                            <label class="col-sm-2 control-label">Password Confirmation </label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control"  required ng-model="user.passconfirm">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="">
+                                <button ng-click="createUser(user)" ng-disabled="newUserForm.$invalid" class=" col-lg-offset-3 col-md-offset-3  btn btn-success waves-effect waves-light ">
+                                    <span> Creer un utilisateur </span>
+                                    <i class="fa fa-send"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </form>
+
+
+
+            </div>
+        </div>
+        <!-- end row -->
+
+
+    </div> <!-- container -->
+
+</div>
+<!-- content -->

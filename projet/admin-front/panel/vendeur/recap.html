@@ -1,0 +1,128 @@
+<div class="content">
+        <div class="container">
+    
+    
+            <!-- breadcrumbs -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Vendeur/Recapulatif des ventes</h4>
+    
+                        <ol class="breadcrumb p-0 m-0">
+                            <li>
+                                <a href="#/">Home</a>
+                            </li>
+                            <li class="active">
+                                Vide Dressing Recapulatif
+                            </li>
+                        </ol>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-b-30">
+                        <a href="#/addliste" id="addToTable" class="btn btn-success waves-effect waves-light">  Ajouter une liste  <i class="m-l-5 fa fa-opencart"></i></a>
+                    </div>
+                </div>
+            </div> -->
+    
+    
+    
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+    
+                    <ul class="nav nav-tabs">
+    
+                        <li class="active">
+                            <a href="#in-wait"  id="recharger" title=" juste a test" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                <span class=""><i class="fa fa-user"></i></span>
+                                <span class="hidden-xs">Resume</span>
+                            </a>
+                        </li>
+    
+                        <li class="">
+                            <a href="#in-done" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                <span class=""><i class="fa fa-calendar-check-o"></i></span>
+                                <span class="hidden-xs">Bon à savoir</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="in-wait">
+    
+                            <div class="row">
+                                <div class="col-md-12">
+    
+                                    <div class="panel panel-border panel-success">
+                                        <div class="panel-body">
+    
+    
+                                                    <!--   -->
+                                                    <div class="">
+                                                        <table class="table table-striped add-edit-table table-bordered" id="datatable-editable">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>Nom de la liste</th>
+                                                                <th>Date de creation</th>
+                                                                <th>Gain (en euros)</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr class="gradeX" ng-repeat="l in listes">
+                                                                <td>{{l.nom_liste}}</td>
+                                                                <td>{{l.date_creation}}
+                                                                </td>
+                                                                <td>{{l.gain}}</td>
+                                                                <td class="actions">
+                                                                  <center>
+                                                                      <a ng-href="#/listes/{{l.numListe}}/true" class="on-editing cancel-row"><i class="fa fa-barcode "></i></a>                                                                  </center>
+                                                                </td>
+                                                            </tr>
+    
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- End property item -->
+    
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="tab-pane" id="in-done">
+    
+                            <div class="row">
+    
+                                <div class="col-md-12">
+                                    <div class="panel panel-border panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title"> Information sur les parametres </h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+        </div>
+    </div>

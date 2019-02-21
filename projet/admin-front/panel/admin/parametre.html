@@ -1,0 +1,203 @@
+<!-- Start content -->
+<div class="content">
+    <div class="container">
+
+        <!-- breadcrumbs -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Admin/Panel</h4>
+
+                    <ol class="breadcrumb p-0 m-0">
+                        <li>
+                            <a href="#/"> <i class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li class="active">
+                            Paramètre
+                        </li>
+                    </ol>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card-box">
+                            <h4 class="header-title m-t-0 m-b-30">Utilisateurs</h4>
+
+                            <h4 class="header-title m-t-0 m-b-30 pull-right" ng-if="!editable">
+                                <button ng-click="changeEdit()" class="btn btn-success waves-effect waves-light ">
+                                    <i class="fa fa-edit"></i>
+                                    <span> Editer </span>
+                                </button>
+                            </h4>
+
+                            <h4 class="header-title m-t-0 m-b-30 pull-right " ng-if="editable">
+                                <button  ng-click="changeEdit()" class="btn btn-warning waves-effect waves-light ">
+                                    <i class="fa fa-hand-pointer-o"></i>
+                                    <span> Annuler </span>
+                                </button>
+                            </h4>
+
+                            <ul class="nav nav-tabs">
+
+                                <li class="active">
+                                    <a href="#in-wait"  id="recharger" title=" juste a test" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                        <span class=""><i class="fa fa-user"></i></span>
+                                        <span class="hidden-xs">Paramètres de ventes</span>
+                                    </a>
+                                </li>
+
+                                <li class="">
+                                    <a href="#in-done" ng-click="$event.preventDefault()" data-toggle="tab" aria-expanded="false">
+                                        <span class=""><i class="fa fa-calendar-check-o"></i></span>
+                                        <span class="hidden-xs">Bon à savoir</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="in-wait">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <div class="panel panel-border panel-danger">
+                                                <div class="panel-body">
+
+                                                    <form class="form-horizontal" name="newUserForm" role="form">
+
+
+                                                        <!--<div class="form-group input-group">-->
+                                                            <!--<label class="col-md-2 control-label">Montant par Articles</label>-->
+                                                            <!--<div class="col-md-8">-->
+                                                                <!--<input type="text" class="form-control" ng-model="parameters.montant_article"  required ng-disabled="!editable">-->
+                                                                <!--<span class="input-group-addon"><i class="fa fa-euro"></i></span>-->
+                                                            <!--</div>-->
+                                                        <!--</div>-->
+
+
+                                                        <div class="form-group input-group">
+                                                            <label class="control-label">Montant par Articles</label>
+                                                            <input type="text" name="example-input3-group1"
+                                                                   ng-model="parameters.montant_article"  required ng-disabled="!editable" class="form-control">
+                                                            <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                        </div>
+
+                                                        <div class="form-group input-group">
+                                                            <label class="control-label">Nombre D'article par liste</label>
+                                                            <input type="text" name="example-input3-group1"
+                                                                   ng-model="parameters.nombre_article"  required ng-disabled="!editable" class="form-control">
+                                                            <span class="input-group-addon"><i class="fa fa"></i></span>
+
+                                                            <!--<div class="col-md-10">-->
+                                                                <!--<input type="text" class="form-control"  ng-model="parameters.nombre_article" required  ng-disabled="!editable">-->
+                                                            <!--</div>-->
+                                                        </div>
+
+                                                        <div class="form-group  input-group">
+                                                            <label class="control-label">Pourcentage de prélèvement </label>
+                                                            <input type="text" name="example-input3-group1"
+                                                                   ng-model="parameters.pourcentage" required ng-disabled="!editable" class="form-control">
+                                                            <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                            <!--<div class="col-md-10">-->
+                                                                <!--<input type="text" class="form-control" ng-model="parameters.pourcentage" required ng-disabled="!editable">-->
+                                                            <!--</div>-->
+                                                        </div>
+
+
+                                                        <div class="">
+                                                            <button ng-click="modifParameter(parameters)" ng-disabled="newUserForm.$invalid" ng-class="{'hidden' : !editable }" class="pull-right col-md-offset-3  btn btn-success waves-effect waves-light ">
+                                                                <span> Changer le paramètre </span>
+                                                                <i class="fa fa-send"></i>
+                                                            </button>
+                                                        </div>
+
+                                                    </form>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane" id="in-done">
+
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="panel panel-border panel-success">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title"> Information sur les parametres </h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+            </div> <!-- container -->
+
+        </div>
+        <!-- content -->
+
+    </div>
+
+</div>
+<!-- end row -->
+
+
+</div> <!-- container -->
+
+</div>
+<!-- content -->
+
+
+
+<!-- sample modal content -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Suppression de compte</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Condition de suppression</h4>
+                <p>Aucun retour en arriere ne sera possible apres cette suppression.</p>
+                <hr>
+                <p> J'en suis responsable voulez-vous continuer ?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger waves-effect waves-light" ng-click="delete(toDelete)">Oui je supprime</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
