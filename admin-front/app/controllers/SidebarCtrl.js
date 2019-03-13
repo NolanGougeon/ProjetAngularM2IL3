@@ -4,7 +4,7 @@ app.controller("SidebarCtrl", function ($scope, $location, Login,Session) {
     $scope.logOut = function () {
         notif('warning','Deconnexion en cours','Compte','toast-top-right');
         window.localStorage.removeItem("user_session");
-        $location.path("/Gla-Vide-Grenier/vitrine-front/");
+        $location.path("/ProjetAngularM2IL3/vitrine-front/");
     };
 
     var data = {action:"CHECK_VENTE_DAY"};

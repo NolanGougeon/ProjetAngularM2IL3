@@ -14,7 +14,7 @@ app.controller("navbarCtrl", function ($scope, Login, $http,toaster) {
                        });
                        // TODO REDIRECTION A
                        window.localStorage.setItem("user_session",JSON.stringify(response.data.data));
-                       window.location = "/Gla-Vide-Grenier/admin-front/panel/#/"
+                       window.location = "/ProjetAngularM2IL3/admin-front/panel/#/"
 
                    } else{
                        toaster.pop({

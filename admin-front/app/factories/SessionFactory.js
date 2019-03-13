@@ -7,8 +7,8 @@ app.factory("Session" , function($q, $http, $location){
 
                 var session = JSON.parse(window.localStorage.getItem("user_session"));
                 if(session === null) {
-                    window.location.href="/Gla-Vide-Grenier/vitrine-front/";
-                    // $location.path("/Gla-Vide-Grenier/vitrine-front/");
+                    window.location.href="/ProjetAngularM2IL3/vitrine-front/";
+                    // $location.path("/ProjetAngularM2IL3/vitrine-front/");
                 }
                 session = session[0];
                 return session;

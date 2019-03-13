@@ -5,7 +5,7 @@ app.controller("NavbarCtrl", function ($scope,Session,$location) {
     $scope.logOut = function () {
         notif('warning','Deconnexion en cours','Compte','toast-top-right');
         window.localStorage.removeItem("user_session");
-        $location.path("/Gla-Vide-Grenier/vitrine-front/");
+        $location.path("/ProjetAngularM2IL3/vitrine-front/");
     };
 
 

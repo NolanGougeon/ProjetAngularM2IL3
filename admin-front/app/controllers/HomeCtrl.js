@@ -10,13 +10,11 @@ app.controller("HomeCtrl", function($scope) {
 
     if ( $scope.session === null ) {
         // redirection pour une personne non logged qui veut se connecter
-        window.location.href = "/Gla-Vide-Grenier/vitrine-front/"
+        window.location.href = "/ProjetAngularM2IL3/vitrine-front/"s
     } else {
             if($scope.session.actif == "0" ){
-                window.location.href = "/Gla-Vide-Grenier/vitrine-front/"
+                window.location.href = "/ProjetAngularM2IL3/vitrine-front/"
             }
     }
 
 });
-
-
