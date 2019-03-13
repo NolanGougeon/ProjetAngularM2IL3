@@ -11,8 +11,6 @@
             $PASSWORD_db= $configs_env['password'];
             $HOST_db= $configs_env['hostname'];
             $NAME_db= $configs_env['dbname'];
-            
-
 
             $bdconect = new PDO("mysql:host=".$HOST_db.";dbname=".$NAME_db,
                 $USERS_db, $PASSWORD_db, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8")
@@ -41,7 +39,7 @@ $header="MIME-Version: 1.0\r\n";
             html {
                 width: 100%;
             }
-            
+
             body {
                 width: 100%;
                 margin: 0;
@@ -52,32 +50,32 @@ $header="MIME-Version: 1.0\r\n";
                 mso-padding-alt: 0px 0px 0px 0px;
                 background: #E7E7E7;
             }
-            
+
             img {
                 border: none!important;
             }
         </style>
         <body style=\"margin: 0; padding: 0; \" yahoo=\"fix \"
-            
+
                 <div class='top' style=\"background-color: #eeeeee;
                          background-size: cover; -webkit-background-size: cover;  width: 100%; height: 300;  \">
-        
-                    <div style=\"color:black; font-family:'Raleway', Helvetica, Arial, 
+
+                    <div style=\"color:black; font-family:'Raleway', Helvetica, Arial,
                                     sans-serif; font-size: 27px; font-weight:100; text-transform: uppercase; line-height:50px; letter-spacing:1px;\">
                         Welcome ! {$contenu['civilite']} {$contenu['nom']};
                         <hr/>
                     </div>
-        
+
                     <div style=\"color:black; font-family:'Raleway', Helvetica, Arial, sans-serif; font-size: 21px; font-weight: 200; text-transform: uppercase; line-height:50px; letter-spacing:1px; \">
                         Veuillez confirmer Votre inscription cher GLAZYK Member Associate.
-                       
-                        <span style='float:right'> 
+
+                        <span style='float:right'>
                             <a href=\"{$contenu['lienActive']}\" style=\"padding: 10px 30px; background:indianred; color: white; text-decoration:none\">Cliquez ici</a>
                         </span>
                     </div>
-        
+
                 </div>
-        
+
         </body>
 </html> ";
 	mail($email, $object, $message, $header);
