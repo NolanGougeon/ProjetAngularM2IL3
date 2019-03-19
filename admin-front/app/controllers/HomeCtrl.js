@@ -10,10 +10,10 @@ app.controller("HomeCtrl", function($scope) {
 
     if ( $scope.session === null ) {
         // redirection pour une personne non logged qui veut se connecter
-        window.location.href = "/ProjetAngularM2IL3/vitrine-front/"s
+        window.location.href = "/ProjetAngularM2IL3/vitrine-front/";
     } else {
             if($scope.session.actif == "0" ){
-                window.location.href = "/ProjetAngularM2IL3/vitrine-front/"
+                window.location.href = "/ProjetAngularM2IL3/vitrine-front/";
             }
     }
 

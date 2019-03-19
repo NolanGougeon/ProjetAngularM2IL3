@@ -35,5 +35,4 @@ app.controller("contactCtrl", function ($scope) {
     // }catch (error){
     //     console.error(error);
     // }
-        console.log(" hello Contoller Contact");
 });
