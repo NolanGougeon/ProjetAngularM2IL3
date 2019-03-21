@@ -38,13 +38,15 @@ function addArticle($data){
 
 
         $bdconnect = connectionToBD();
-        $sql =  " INSERT INTO article (numListe, prix, taille, description, commentaire, statut, photo)
-              VALUES (:num_liste, :prix, :taille, :description, :commentaire, :statut, :photo );";
+        $parametres = getAllParametre();
+        $sql =  " INSERT INTO article (numListe, prix, taille, description, commentaire, statut, photo, pourcentage)
+              VALUES (:num_liste, :prix, :taille, :description, :commentaire, :statut, :photo , :pourcentage);";
         $preStatment = $bdconnect->prepare($sql);
 
         $data['statut']="NON FOURNI";
         $data['photo'] = null;
-        if(isset($_FILES) && !empty($_FILES)){
+        $data['pourcentage'] = $parametres['x'];
+        if(isset($_FILES) && !empty($_FILES)) {
             $destination = $_FILES['file']['name'];
             $data['photo'] = $destination;
         }
