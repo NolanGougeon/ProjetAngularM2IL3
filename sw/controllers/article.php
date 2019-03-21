@@ -10,33 +10,26 @@ include '../dbconnexion.php';
 
 #... verif iic apres on mettra des tockens de connexions de sessions mais actu boff pas trop le temps
 
-if(isset($_POST) && !empty($_POST)){
-
-    if($_POST["action"]=="UPDATE"){
+if(isset($_POST) && !empty($_POST)) {
+    if($_POST["action"]=="UPDATE") {
         updateArticle($_POST);
     }
-    if($_POST["action"]=="ADD_VENTE"){
+    if($_POST["action"]=="ADD_VENTE") {
          addVente($_POST);
     }
-    if($_POST["action"]=="RETRAIT"){
+    if($_POST["action"]=="RETRAIT") {
          updateArticle($_POST);
     }
     if($_POST["action"]=="FILE"){
             addArticle($_POST['data']);
     }
-
-
-
-} elseif (isset($_GET)  && !empty($_GET)){
+} elseif (isset($_GET)  && !empty($_GET)) {
 
 }
 
 function addArticle($data){
-
     $response =[];
-    try{
-
-
+    try {
         $bdconnect = connectionToBD();
         $parametres = getAllParametre();
         $sql =  " INSERT INTO article (numListe, prix, taille, description, commentaire, statut, photo, pourcentage)
@@ -53,36 +46,27 @@ function addArticle($data){
 
         $preStatment->execute($data);
 
-        if(isset($_FILES) && !empty($_FILES)){
+        if(isset($_FILES) && !empty($_FILES)) {
             $destination = "../files/". $destination;
             move_uploaded_file( $_FILES['file']['tmp_name'] , $destination );
         }
+
         $response = [
             "success"=>true,
             "message"=>"nouvel article enregistre"
         ];
-
-    }catch (PDOException $ex){
+    } catch (PDOException $ex) {
         $response = [
             "success"=>false,
             "message"=>$ex->getMessage(),
         ];
         echo json_encode($response);
     }
-
     echo json_encode($response);
 };
 
-
-
-
-
-
-
 //Tout les users
-function addVente($data){
-
-
+function addVente($data) {
     $bdconnect = connectionToBD();
     $resuldata = [];
     $sql =  " INSERT INTO vente (dateV, acheteur, acheteur_numero, acheteur_adresse)
@@ -102,10 +86,8 @@ function addVente($data){
 //    die();
 
     try{
-
-
         //si c'est une premiere sent pour la data
-        if( empty($data["lasteIdVente"]) ) {
+        if(empty($data["lasteIdVente"])) {
 
             $preStatment->execute(array(
                 "acheteur"=>$data["acheteur_name"],
@@ -130,8 +112,6 @@ function addVente($data){
                 "success" => true,
                 "message"=>"premier article inserer",
             ];
-
-
         } else {
 
             $preStatment2->execute(array(
@@ -147,35 +127,22 @@ function addVente($data){
                 "message"=>" c'est les suivants articles",
                 "success" => true,
             ];
-
         }
-
-
-    }catch (PDOException $ex){
+    } catch (PDOException $ex) {
         $resuldata=[
             "success"=>false,
             "error"=>$ex->getMessage(),
         ];
         echo  json_encode($resuldata);
     }
-
     echo json_encode($resuldata);
-
-
 };
-
-
-
 
 // mise a jour  d'un utilisateur
 function updateArticle($data){
-
-
     $response =[];
     $bdconnect = connectionToBD();
-    try{
-
-
+    try {
         $sql= "UPDATE article SET article.statut=:statut, article.commentaire=:commentaire WHERE codeA=:codeA ";
         $pst =  $bdconnect->prepare($sql);
         $pst->execute(array(
@@ -188,29 +155,27 @@ function updateArticle($data){
             "success"=>true,
             "message"=>"modification effectue avec sucess",
         ];
-    }catch (PDOException $ex){
+    } catch (PDOException $ex) {
         $response=[
             "success"=>false,
             "error"=>$ex->getMessage(),
         ];
         echo  json_encode($response);
     }
-
     echo json_encode($response);
-
-
 }
 
 // copy un tableau a l'exeception d'un champ $exeception;
-function copyArray($tableau, $exceptItem){
+function copyArray($tableau, $exceptItem) {
     $toExecute = [];
     if(is_array($tableau)){
-        foreach ($tableau as $item =>$value){
+        foreach ($tableau as $item =>$value) {
 
             if($item !=$exceptItem) {
                 $toExecute[$item] =$value;
             }
         }
     }
+
     return $toExecute;
 }

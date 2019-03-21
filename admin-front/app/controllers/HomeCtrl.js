@@ -12,9 +12,8 @@ app.controller("HomeCtrl", function($scope) {
         // redirection pour une personne non logged qui veut se connecter
         window.location.href = "/ProjetAngularM2IL3/vitrine-front/";
     } else {
-            if($scope.session.actif == "0" ){
-                window.location.href = "/ProjetAngularM2IL3/vitrine-front/";
-            }
+        if($scope.session.actif == "0" ){
+            window.location.href = "/ProjetAngularM2IL3/vitrine-front/";
+        }
     }
-
 });
