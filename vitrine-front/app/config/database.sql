@@ -17,6 +17,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `paiement`
+--
+
+CREATE TABLE `paiement`(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    user_trigramme CHAR(3) NOT NULL,
+    num_liste INT(11) NOT NULL,
+    date_paiement DATE NOT NULL,
+    type_paiement VARCHAR(32) NOT NULL,
+    montant DOUBLE NOT NULL
+);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `admin`
 --
 
