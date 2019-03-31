@@ -28,35 +28,37 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
     }
 
      try{
-        ListesFactory.LoadListeDetails(num_liste).then(function (response) {
-            $scope.listesdetails= response.data;
-            for(var k =0 ;  k < $scope.listesdetails.length ; ++k) {
-                if( $scope.listesdetails[k].photo !== null) {
-                    $scope.listesdetails[k].photo = BASE_FILE +""+$scope.listesdetails[k].photo;
-                } else {
-                    $scope.listesdetails[k].photo = BASE_FILE +"icon-standard.png";
+        if (num_liste) {
+            ListesFactory.LoadListeDetails(num_liste).then(function (response) {
+                $scope.listesdetails= response.data;
+                for(var k =0 ;  k < $scope.listesdetails.length ; ++k) {
+                    if( $scope.listesdetails[k].photo !== null) {
+                        $scope.listesdetails[k].photo = BASE_FILE +""+$scope.listesdetails[k].photo;
+                    } else {
+                        $scope.listesdetails[k].photo = BASE_FILE +"icon-standard.png";
+                    }
                 }
-            }
-            console.log($scope.listesdetails);
-            Login.getParameters().then(function (res) {
-                if(res.data.success){
-                    $scope.parameters = res.data.data;
-                    if($scope.listesdetails.length==parseInt($scope.parameters.nombre_article)){
-                        $scope.burnOut=true;
+                console.log($scope.listesdetails);
+                Login.getParameters().then(function (res) {
+                    if(res.data.success){
+                        $scope.parameters = res.data.data;
+                        if($scope.listesdetails.length==parseInt($scope.parameters.nombre_article)){
+                            $scope.burnOut=true;
+                        } else {
+                            $scope.burnOut=false;
+                        }
+
+                        if($scope.listesdetails.length==0){
+                            $scope.empty = true;
+                        } else {
+                            $scope.empty = false;
+                        }
                     } else {
                         $scope.burnOut=false;
                     }
-
-                    if($scope.listesdetails.length==0){
-                        $scope.empty = true;
-                    } else {
-                        $scope.empty = false;
-                    }
-                } else {
-                    $scope.burnOut=false;
-                }
+                });
             });
-        });
+        }
     } catch (ex) {
         console.error(ex);
     }
