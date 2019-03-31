@@ -1,6 +1,4 @@
 app.controller("usersCtrl" , function ($scope , $location, Login) {
-
-
     console.log(" hello users Ctrl");
 
     Login.getAllusers("ALL").then(function (resp) {
@@ -14,8 +12,6 @@ app.controller("usersCtrl" , function ($scope , $location, Login) {
     };
 
     $scope.delete = function(data){
-
-
         Login.deleteUser(data.trigramme).then(function (response) {
             if(response.data.success){
                   window.location.reload();

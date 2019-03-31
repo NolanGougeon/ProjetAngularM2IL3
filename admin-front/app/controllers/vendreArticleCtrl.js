@@ -1,13 +1,10 @@
 app.controller("vendreArticleCtrl", function ($scope, $routeParams, Login , ListesFactory,$location) {
-
     try {
-
         $scope.session = JSON.parse(window.localStorage.getItem("user_session"));
         $scope.session = $scope.session[0];
         // console.log("hello seller article");
         // console.log($scope.session);
     } catch (error) {
-
         console.log(error)
     }
 
@@ -19,29 +16,23 @@ app.controller("vendreArticleCtrl", function ($scope, $routeParams, Login , List
         }
     });
 
-
     $scope.toBuys = [];
     $scope.articles=[];
 
     $scope.searchArticle = function (article) {
-
         $scope.articles=[];
         ListesFactory.loadListeDetailsElement(article.codeA).then(function (response) {
-
             for(var i=0 ; i < response.data.length; i++){
                 if(response.data[i].statut != "VENDU"){
                     $scope.articles=response.data;
                 }
             }
-
-
             //
             for(var i =0 ; i < $scope.articles.length ; i++){
                 isAlreadyCheck($scope.toBuys, $scope.articles[i])
             }
 
         });
-
     };
 
     $scope.addToPanier =  function (data) {
@@ -70,7 +61,6 @@ app.controller("vendreArticleCtrl", function ($scope, $routeParams, Login , List
     };
 
     $scope.validerAchat = function () {
-
         for( var i = 0; i < $scope.toBuys.length; i++) {
             $scope.toBuys[i].action ="ADD_VENTE";
             $scope.toBuys[i].acheteur_name =$scope.acheteur.nom;
@@ -78,31 +68,28 @@ app.controller("vendreArticleCtrl", function ($scope, $routeParams, Login , List
             $scope.toBuys[i].acheteur_numero =$scope.acheteur.numero;
         }
 
-
         ListesFactory.setVente($scope.toBuys[0]).then(function (response) {
             $scope.isDone = true;
             if(response.data.success){
                 $scope.lasteIdVente = response.data.lasteIdVente;
                 for(var i = 1; i < $scope.toBuys.length; i++ ){
                     $scope.toBuys[i].lasteIdVente = $scope.lasteIdVente;
-                        ListesFactory.setVente($scope.toBuys[i]).then(function(resp){
+                    ListesFactory.setVente($scope.toBuys[i]).then(function(resp){
 
-                            if(resp.data.success){
-                                $scope.isDone =true;
-                            } else {
-                                $scope.isDone =false;
-                            }
-                        });
+                        if(resp.data.success){
+                            $scope.isDone =true;
+                        } else {
+                            $scope.isDone =false;
+                        }
+                    });
                 }
             }
+
             if($scope.isDone){
                 notif('success','le compte à été créer avec succès','VENTE','toast-top-full-width');
             }
         });
-
-
     };
-
 
     $scope.retirer = function (data) {
         $scope.toRetrait = data;
@@ -120,16 +107,7 @@ app.controller("vendreArticleCtrl", function ($scope, $routeParams, Login , List
         });
     };
 
-
-
-
     $(document).ready(function() {
         $('form').parsley();
     });
-
-
-
-
-
-
 });

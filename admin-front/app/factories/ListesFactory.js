@@ -11,7 +11,7 @@ app.factory("ListesFactory", function ($q, $http) {
             });
             return deferred.promise;
         },
-        
+
         LoadListesGain: function (trigramme) {
             var deferred = $q.defer();
             $http.get(BASE_URL + "listes.php?action=allGain&tri="+trigramme).then(function (data, status) {
@@ -80,7 +80,7 @@ app.factory("ListesFactory", function ($q, $http) {
             });
             return deferred.promise;
         },
-        
+
         LoadListeDetails: function (num_liste) {
             var deferred = $q.defer();
             $http.get(BASE_URL + "listes.php?action=listedetails&num="+num_liste).then(function (data, status) {
@@ -160,7 +160,6 @@ app.factory("ListesFactory", function ($q, $http) {
             return deferred.promise;
         },
     };
-
 
     return factory;
 });

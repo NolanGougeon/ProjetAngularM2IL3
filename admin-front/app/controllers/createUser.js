@@ -1,6 +1,4 @@
 app.controller("createUserCtrl", function ($scope , $routeParams, $location, Login ) {
-
-
     console.log("hello create user controller");
 
     $scope.createUser = function (data) {

@@ -14,7 +14,6 @@ if(isset($_POST)){
     $user_login=$_POST['email'];
     $user_password =$_POST['password'];
 
-
     if(isset($user_login)){
             $data = [];
             try{

@@ -187,39 +187,30 @@
         <script>
             var appLogin=angular.module("login", []);
             appLogin.controller('Login', function ($scope,$http,$location,$timeout) {
-
-              $scope.loader=false;
-              window.localStorage.removeItem("user_session");
-        
-              $scope.seConnecter = function (data) {
-
-                 $scope.loader = true;
-                  console.log(data);
-                  console.log($scope.loader);
-                  window.location = "panel/"
-
-
-                  $http.post(BASE_URL+"login/user", data).then(function (resp) {
-                     console.log(resp.data);
-                     if(resp.data.success){
-                         $scope.loader=false;
-                         notif('success',resp.data.msg,'Connexion');
-                         $timeout(function () {
-                             window.localStorage.setItem("user_session",JSON.stringify(resp.data.data));
-                             window.location = "panel/private/"
-                         }, 2400);
-                     }else{
-                         $scope.loader=false;
-                         notif('error',resp.data.msg,'Connexion');
-                     }
+                $scope.loader = false;
+                window.localStorage.removeItem("user_session");
+                $scope.seConnecter = function (data) {
+                $scope.loader = true;
+                console.log(data);
+                console.log($scope.loader);
+                window.location = "panel/"
+                    $http.post(BASE_URL+"login/user", data).then(function (resp) {
+                        console.log(resp.data);
+                        if(resp.data.success){
+                            $scope.loader = false;
+                            notif('success',resp.data.msg,'Connexion');
+                            $timeout(function () {
+                            window.localStorage.setItem("user_session",JSON.stringify(resp.data.data));
+                            window.location = "panel/private/"
+                        }, 2400);
+                    } else {
+                        $scope.loader = false;
+                        notif('error',resp.data.msg,'Connexion');
+                    }
                  });
-
               }; //end seconnecter
-
             });
         </script>
-
     </body>
-
 <!-- Mirrored from coderthemes.com/zircos_2/material-design/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 18:25:22 GMT -->
 </html>
