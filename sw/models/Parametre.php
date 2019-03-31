@@ -102,7 +102,7 @@
             $bd = new ConnectionToBD();
             $bdconnect = $bd->getBdconect();
             try{
-                $query = $connexion->prepare("SELECT * FROM parametre");
+                $query = $bdconnect->prepare("SELECT * FROM parametre");
                 $query->execute();
 
                 return $result = $query->fetch();
