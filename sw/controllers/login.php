@@ -6,7 +6,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type:application/json');
 
-include '../dbconnexion.php';
+require_once("../models/User.php");
 
 #... verif iic apres on mettra des tockens de connexions de sessions mais actu boff pas trop le temps
 $response = [];
@@ -16,32 +16,9 @@ if(isset($_POST)){
 
 
     if(isset($user_login)){
-
-            $bdconnect = connectionToBD();
-
             $data = [];
             try{
-                $sql = "SELECT *FROM user WHERE  user.email= '$user_login' LIMIT 1 ";
-                $result = $bdconnect->query($sql);
-                $result->setFetchMode(PDO::FETCH_ASSOC);
-
-                foreach ($result as $item){
-                    $data [] = [
-                        "name"=>$item['nom'],
-                        "prenom"=>$item['prenom'],
-                        "dateNaissance"=>$item['dateNaissance'],
-                        "civilite"=>$item['civilite'],
-                        "email"=>$item['email'],
-                        "password"=>$item['password'],
-                        "numero"=>$item['numero'],
-                        "type"=>$item['typeUser'],
-                        "trigramme"=>$item['trigramme'],
-                        "actif"=>$item['actif'],
-                        "adresse"=>$item['adresse'],
-
-                    ] ;
-                }
-
+				$data = User::getUser($user_login);
                 // si on retrouve des donnees correspondant au user alors on verifie son mot de passe
                 if(!empty($data)){
                     // si le password est correcte alors;
@@ -64,8 +41,6 @@ if(isset($_POST)){
                         "autorize"=>false
                     ];
                 }
-
-
             }catch (PDOException $ex){
                 echo $ex->getMessage();
                 die();
