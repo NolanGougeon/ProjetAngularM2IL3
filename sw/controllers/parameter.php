@@ -7,14 +7,14 @@ header('Content-Type:application/json');
 require_once("../models/Parametre.php");
 
 if(isset($_GET) && !empty($_GET)){
-    echo json_encode(Parametre::getParameters($_GET);
+    echo json_encode(Parametre::getParameters($_GET));
 }
 
 if(isset($_POST) && !empty($_POST)){
     if($_POST['action']=="UPDATE"){
         echo json_encode(Parametre::updateParameter(copyArray($data , "action")));
     } elseif ($_POST['action']=="ALL"){
-        echo json_encode(Parametre::getParameters($_POST);
+        echo json_encode(Parametre::getParameters($_POST));
     } elseif ($_POST['action']=="CHECK_VENTE_DAY"){
         echo json_encode(Parametre::activeVente($_POST));
     }
@@ -33,4 +33,3 @@ function copyArray($tableau, $exceptItem){
     }
     return $toExecute;
 }
-
