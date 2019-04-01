@@ -33,13 +33,13 @@
         public static function add($data){
             $bd = new ConnectionToBD();
             $bdconnect = $bd->getBdconect();
-            
+
             try {
-                $parametres = Parametre::getAllParametre();
+                $parametres = Parametre::getAll();
                 $sql =  " INSERT INTO article (numListe, prix, taille, description, commentaire, statut, photo, pourcentage)
                       VALUES (:num_liste, :prix, :taille, :description, :commentaire, :statut, :photo , :pourcentage);";
                 $preStatment = $bdconnect->prepare($sql);
-        
+
                 $data['statut']="NON FOURNI";
                 $data['photo'] = null;
                 $data['pourcentage'] = $parametres['x'];
