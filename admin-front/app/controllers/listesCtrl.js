@@ -252,6 +252,35 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
         $('form').parsley();
     });
 
+    if ($('#paypal-button-container').length) {
+        ListesFactory.LoadListeDetails(num_liste).then(function (response) {
+            var listeDetails = response.data;
+            var total = 0;
+            $.each(listeDetails, function(article, articleData) {
+                 total += articleData.prix;
+            })
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    // Set up the transaction
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: total
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    // Capture the funds from the transaction
+                    return actions.order.capture().then(function(details) {
+                        // Show a success message to your buyer
+                        alert('Transaction completed by ' + details.payer.name.given_name);
+                    });
+                }
+            }).render('#paypal-button-container');
+        });
+    }
+
     // for(var i=0;i=5;i++){
     //     console.log(i);
     // }

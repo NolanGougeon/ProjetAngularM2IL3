@@ -59,6 +59,10 @@ app.config(function($routeProvider, $httpProvider) {
             templateUrl: 'vendeur/etiquette.html',
             controller: 'codeCtrl'
         })
+        .when('/liste-buy/:num', {
+            templateUrl: 'vendeur/buyliste.html',
+            controller: 'listesCtrl',
+        })
         .when('/recap', {
             templateUrl: 'vendeur/recap.html',
             controller: 'recapCtrl'

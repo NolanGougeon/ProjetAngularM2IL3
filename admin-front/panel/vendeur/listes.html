@@ -69,9 +69,10 @@
                                                             <td>{{l.statut}}</td>
                                                             <td class="actions">
                                                               <center>
-                                                                  <a ng-href="#/listes-view/{{l.numListe}}" class="on-editing cancel-row"><i class="fa fa-barcode "></i></a>
-                                                                  <a href="#/listes/{{l.numListe}}" class="on-default edit-row" ng-hide="l.statut!='en cours'"><i class="fa fa-pencil"></i></a>
-                                                                  <button class="on-default remove-row" ng-hide="l.statut!='en cours'"  ng-click="DeleteListe(l.numListe)"><i class="fa fa-trash-o"></i></button>
+                                                                    <a ng-href="#/listes-view/{{l.numListe}}" class="on-editing cancel-row"><i class="fa fa-barcode "></i></a>
+                                                                    <a href="#/listes/{{l.numListe}}" class="on-default edit-row" ng-hide="l.statut!='en cours'"><i class="fa fa-pencil"></i></a>
+                                                                    <button class="on-default remove-row" ng-hide="l.statut!='en cours'"  ng-click="DeleteListe(l.numListe)"><i class="fa fa-trash-o"></i></button>
+                                                                    <a href="#/liste-buy/{{l.numListe}}" class="on-default edit-row" ng-hide="l.statut!='soumis'">Payer</a>
                                                               </center>
                                                             </td>
                                                         </tr>
