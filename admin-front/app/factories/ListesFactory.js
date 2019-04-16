@@ -159,6 +159,16 @@ app.factory("ListesFactory", function ($q, $http) {
             });
             return deferred.promise;
         },
+
+        addPaiement: function (num_liste, trigramme, montant, type_paiement) {
+            var deferred = $q.defer();
+            $http.post(BASE_URL + "paiement.php",{action:"add",num_liste:num_liste,trigramme:trigramme,montant:montant,type_paiement:type_paiement}).then(function (data, status) {
+                deferred.resolve(data);
+            }).catch(function (data) {
+                deferred.reject("Impossible de recupere les donnees");
+            });
+            return deferred.promise;
+        }
     };
 
     return factory;

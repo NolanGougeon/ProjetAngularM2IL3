@@ -273,8 +273,15 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
                 onApprove: function(data, actions) {
                     // Capture the funds from the transaction
                     return actions.order.capture().then(function(details) {
-                        // Show a success message to your buyer
-                        alert('Transaction completed by ' + details.payer.name.given_name);
+                        ListesFactory.addPaiement(num_liste, $scope.session.trigramme, total, 'paypal');
+                        var query = {};
+                        query.num_liste = num_liste;
+                        query.action = "UPDATE";
+                        query.critere = "statut";
+                        query.type = "ONLYONE";
+                        query.statut = "acceptee";
+                        ListesFactory.setUpdate(query);
+                        window.location.href="#/listes";
                     });
                 }
             }).render('#paypal-button-container');
