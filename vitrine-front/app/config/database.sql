@@ -310,6 +310,8 @@ INSERT INTO `user` (`id`, `nom`, `prenom`, `dateNaissance`, `civilite`, `email`,
 (14, 'Edgar', 'LeBreton', '2019-01-30', 'Monsieur', 'admin@mail.com', '$2y$10$ylEgcXN8lAmztrU3Oc1ue.ddDCA6fzEzXLlUaiwY5I5vBPJYedEJK', 'organisateur', '0909123456', 'LED', 1, '0fe3fb8b71a7899c1d1712127776a5ae', 'Terasse superficile de magne', ''),
 (15, 'Tra bi', 'Fabio', '1998-01-18', 'Monsieur', 'fabio@mail.com', '$2y$10$GPgE0WLMZEVD1DOGR6K/wer6l84QXu5x6n2tymJhZ2QGh3/N5dgsm', 'vendeur', '0719227853', 'FTR', 0, 'c9e5dd07e4d5763665f98d1d11f50bb4', 'Xavier grall du jardiens', '44986');
 
+INSERT INTO `user` (`id`, `nom`, `prenom`, `dateNaissance`, `civilite`, `email`, `password`, `typeUser`, `numero`, `trigramme`, `actif`, `cle`, `adresse`, `cp`) VALUES
+(17, 'GOUGEON', 'Nolan', '2019-04-14', 'Monsieur', 'nolan.gougeon@edu.itescia.fr', '$2y$10$.vcNVZg0p5jb.Lwbn./VYOxI8enl8op3iSWVj1YfkCa3eZcb4bz3y', 'organisateur', '77971699', 'NGA', 1, 'verified', '13 Avenue Aristide Maillol', '95370');
 -- --------------------------------------------------------
 
 --
