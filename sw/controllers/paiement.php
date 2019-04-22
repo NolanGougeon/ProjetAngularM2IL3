@@ -8,9 +8,10 @@ header('Content-Type:application/json');
 
 require_once("../models/Paiement.php");
 
-if(isset($_GET) && !empty($_GET)){
-    if($_GET['action']=="add"){
-        $paiement = new Paiement(null, $_POST['trigramme'], $_POST['num_liste'], date('d/m/Y H:i:s'), $_POST['type_paiement'], $_POST['montant']);
-        json_encode($paiement->add());
+if(isset($_POST) && !empty($_POST)){
+    if($_POST['action']=="add"){
+        $paiement = new Paiement(null, $_POST['trigramme'], $_POST['num_liste'], date('Y-m-d'), $_POST['type_paiement'], $_POST['montant']);
+        $result = $paiement->add();
+        return $result;
     }
 }

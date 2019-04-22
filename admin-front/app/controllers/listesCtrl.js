@@ -275,7 +275,7 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
                     return actions.order.capture().then(function(details) {
                         ListesFactory.addPaiement(num_liste, $scope.session.trigramme, total, 'paypal');
                         var query = {};
-                        query.num_liste = num_liste;
+                        query.numListe = num_liste;
                         query.action = "UPDATE";
                         query.critere = "statut";
                         query.type = "ONLYONE";
