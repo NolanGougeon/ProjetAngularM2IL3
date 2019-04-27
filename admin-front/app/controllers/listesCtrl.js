@@ -284,6 +284,7 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
                         query.type = "ONLYONE";
                         query.statut = "acceptee";
                         ListesFactory.setUpdate(query);
+                        notif('success','Paiement réalisé avec succès !','Liste validé !','toast-top-full-width');
                         window.location.href="#/listes";
                     });
                 }
