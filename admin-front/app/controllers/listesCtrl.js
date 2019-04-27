@@ -256,9 +256,12 @@ app.controller("listesCtrl", function ($scope,$routeParams,ListesFactory, Login,
         ListesFactory.LoadListeDetails(num_liste).then(function (response) {
             var listeDetails = response.data;
             var total = 0;
-            $.each(listeDetails, function(article, articleData) {
-                 total += articleData.prix;
-            })
+
+            // Le vendeur doit payer x euros par articles qu'il compte mettre en vente.
+            Login.getParameters().then(function (res) {
+                total = listeDetails.length * res.data.data.montant_article;
+            });
+
             paypal.Buttons({
                 createOrder: function(data, actions) {
                     // Set up the transaction
